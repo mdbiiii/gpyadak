@@ -24,8 +24,18 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        $commodities=Commodity::all();
+        if (count($commodities)>5){
+            $choose=$commodities->random(6);
+        }elseif(count($commodities)<3){
+            $choose=[];
+        }else{
+            $choose=$commodities->random(3);
+        }
+
         return view('home1',[
-            'commodities'=>Commodity::all()
+            'commodities'=>$choose
         ]);
     }
 }
