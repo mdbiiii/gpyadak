@@ -32,6 +32,28 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">{{ __('ایجاد برند') }}</div>
+
+                            <div class="card-body">
+
+                                <a href="{{route('brand')}}" class="btn btn-dark">برای وارد کردن برند جدید کلیک کنید</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">{{ __('ایجاد ماشین') }}</div>
+
+                            <div class="card-body">
+
+                                <a href="{{route('cartype')}}" class="btn btn-dark">برای وارد کردن ماشین جدید کلیک کنید</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

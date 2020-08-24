@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Commodity;
+use App\Brand;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CommodityRequest;
+use App\Http\Requests\BrandRequest;
 use Illuminate\Http\Request;
 
-class CommodityController extends Controller
+class BrandController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class CommodityController extends Controller
      */
     public function create()
     {
-        return view('admin.commodity.commodity');
+       return view('admin.brand.brand');
     }
 
     /**
@@ -35,37 +35,30 @@ class CommodityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CommodityRequest $request)
+    public function store(BrandRequest $request)
     {
         $valid_data=$request->validated();
 
-
+        //image save
         $file=$request->file('image');
 
         $file_name=$file->getClientOriginalName();
 
-        $file_path="upload/commodity/{$file_name}";
-       $file_url=url("{$file_path}/{$file_name}");
-
-
+        $file_path="upload/brand/{$file_name}";
+        $file_url=url("{$file_path}/{$file_name}");
 
         $file->move(public_path($file_path),$file_name);
+        //image save
 
-
-
-        $cartype_ID=$request->input('cartype');
-
-
-
-
-        Commodity::create([
-            'cartype_id'=>$cartype_ID,
+        // save in data base
+        Brand::create([
             'name'=>$valid_data['name'],
             'info'=>$valid_data['info'],
-            'image_url'=>$file_url
+            'logo_url'=>$file_url,
         ]);
+        // save in data base
 
-        return redirect(route('commodity'));
+        return redirect(route('brand'));
 
 
     }
@@ -73,10 +66,10 @@ class CommodityController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Commodity  $commodity
+     * @param  \App\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function show(Commodity $commodity)
+    public function show(Brand $brand)
     {
         //
     }
@@ -84,10 +77,10 @@ class CommodityController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Commodity  $commodity
+     * @param  \App\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function edit(Commodity $commodity)
+    public function edit(Brand $brand)
     {
         //
     }
@@ -96,10 +89,10 @@ class CommodityController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Commodity  $commodity
+     * @param  \App\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Commodity $commodity)
+    public function update(BrandRequest $request, Brand $brand)
     {
         //
     }
@@ -107,10 +100,10 @@ class CommodityController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Commodity  $commodity
+     * @param  \App\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Commodity $commodity)
+    public function destroy(Brand $brand)
     {
         //
     }

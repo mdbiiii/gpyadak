@@ -25,6 +25,19 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::prefix('admin')->namespace('Admin')->group(function (){
     Route::get('/','AdminController@index')->name('admin');
+
+
     Route::get('/commodity','CommodityController@create')->name('commodity');
     Route::post('/commodity','CommodityController@store');
+
+
+    Route::get('/cartype','CartypeController@create')->name('cartype');
+    Route::post('/cartype','CartypeController@store');
+
+    Route::get('/brand','BrandController@create')->name('brand');
+    Route::post('/brand','BrandController@store');
+    Route::get('/brand/{brand}/edit','BrandController@edit');
+    Route::post('/brand/{brand}/edit','BrandController@update');
+
 });
+

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CommodityRequest extends FormRequest
+class BrandRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,6 @@ class CommodityRequest extends FormRequest
             'name'=>'required',
             'info'=>'required',
             'image'=>'required|mimes:jpeg,jpg,bmp,png|max:10240'
-
         ];
     }
 }
