@@ -24,17 +24,18 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
-                            <div class="card-header">{{ __('ایجاد برند') }}</div>
+                            <div class="card-header">{{ __('بروزرسانی برند') }}</div>
 
                             <div class="card-body">
-                                <form method="POST" action="{{ route('brand') }}" enctype="multipart/form-data">
+                                <form method="POST" action="/admin/brand/{{$brand->id}}/edit" enctype="multipart/form-data">
                                     @csrf
+                                    @method('put')
 
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نام برند') }}</label>
 
                                         <div class="col-md-6">
-                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{ old('name') }}"  autofocus placeholder="نام برند را وارد نمایید">
+                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{$brand->name}}"  autofocus placeholder="نام برند را وارد نمایید">
 
                                             @error('name')
                                             <span class="invalid-feedback" role="alert">
@@ -48,7 +49,9 @@
                                         <label for="info" class="col-md-4 col-form-label text-md-right">{{ __('اطلاعات برند') }}</label>
 
                                         <div class="col-md-6">
-                                            <input id="info" type="text" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات برند را وارد نمایید">
+{{--                                            <input id="info" type="textarea" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات برند را وارد نمایید"--}}
+{{--                                            value="{{$brand->info}}">--}}
+                                            <textarea name="info" id="info" cols="30" rows="10"  class="form-control @error('info') is-invalid @enderror" name="info" value="">{{$brand->info}}</textarea>
 
                                             @error('info')
                                             <span class="invalid-feedback" role="alert">
@@ -62,7 +65,11 @@
                                         <label for="file" class="col-md-4 col-form-label text-md-right">{{ __('لوگوی برند') }}</label>
 
                                         <div class="col-md-6">
-                                            <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image"  placeholder="لوگو را وارد نمایید">
+                                            <img  class=" img-fluid img-thumbnail " src="{{\Illuminate\Support\Facades\URL::asset($brand->logo_url)}}">
+
+                                            <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image"  placeholder="لوگو را وارد نمایید"
+                                                   value="#">
+
 
                                             @error('image')
                                             <span class="invalid-feedback" role="alert">
@@ -75,7 +82,7 @@
                                     <div class="form-group row mb-0">
                                         <div class="col-md-6 offset-md-4">
                                             <button type="submit" class="btn btn-primary">
-                                                {{ __('ثبت') }}
+                                                {{ __('بروزرسانی') }}
                                             </button>
 
                                         </div>

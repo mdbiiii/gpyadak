@@ -62,7 +62,9 @@
                                         <label for="info" class="col-md-4 col-form-label text-md-right">{{ __('اطلاعات ماشین') }}</label>
 
                                         <div class="col-md-6">
-                                            <input id="info" type="text" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات ماشین را وارد نمایید">
+                                            <textarea name="info" id="info" cols="30" rows="10"  class="form-control @error('info') is-invalid @enderror" name="info" value="">{{$brand->info}}</textarea>
+
+{{--                                            <input id="info" type="text" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات ماشین را وارد نمایید">--}}
 
                                             @error('info')
                                             <span class="invalid-feedback" role="alert">

@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Brand;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\BrandRequest;
+use App\Http\Requests\BrandRequestCreate;
+use App\Http\Requests\BrandRequestEdit;
 use Illuminate\Http\Request;
 
 class BrandController extends Controller
@@ -35,7 +36,7 @@ class BrandController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BrandRequest $request)
+    public function store(BrandRequestCreate $request)
     {
         $valid_data=$request->validated();
 
@@ -82,7 +83,11 @@ class BrandController extends Controller
      */
     public function edit(Brand $brand)
     {
-        //
+
+
+       return view('admin.brand.brand_edit',[
+           'brand'=> $brand,
+       ]);
     }
 
     /**
@@ -92,9 +97,43 @@ class BrandController extends Controller
      * @param  \App\Brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function update(BrandRequest $request, Brand $brand)
+    public function update(BrandRequestEdit $request, Brand $brand)
     {
-        //
+
+
+        if(!($request->hasFile('image'))){
+
+            $valid_data=$request->validate([
+                'name'=>'required',
+                'info'=>'required',
+            ]);
+            $brand->update([
+                'name'=>$valid_data['name'],
+                'info'=>$valid_data['info'],
+
+            ]);
+
+        }else{
+
+            $valid_data=$request->validated();
+            $file=$request->file('image');
+
+            $file_name=$file->getClientOriginalName();
+
+            $file_path="upload/brand/{$file_name}";
+            $file_url=url("{$file_path}/{$file_name}");
+
+            $file->move(public_path($file_path),$file_name);
+
+            $brand->update([
+                'name'=>$valid_data['name'],
+                'info'=>$valid_data['info'],
+                'logo_url'=>$file_url,
+            ]);
+        }
+
+
+       return redirect()->back();
     }
 
     /**

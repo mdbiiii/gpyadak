@@ -24,17 +24,17 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
-                            <div class="card-header">{{ __('ایجاد محصول') }}</div>
+                            <div class="card-header">{{ __('ایجاد ماشین') }}</div>
 
                             <div class="card-body">
-                                <form method="POST" action="{{ route('commodity') }}" enctype="multipart/form-data">
+                                <form method="POST" action="{{ route('cartype') }}" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="form-group row">
-                                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نام محصول') }}</label>
+                                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نام ماشین') }}</label>
 
                                         <div class="col-md-6">
-                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{ old('name') }}"  autofocus placeholder="نام محصول را وارد نمایید">
+                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{ old('name') }}"  autofocus placeholder="نام ماشین را وارد نمایید">
 
                                             @error('name')
                                             <span class="invalid-feedback" role="alert">
@@ -43,26 +43,28 @@
                                             @enderror
                                         </div>
                                     </div>
+
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نوع ماشین') }}</label>
                                         <div class="col-md-6">
 
-                                        <select name="cartype" class=" form-controls"  >
-                                            @foreach(\App\Cartype::all() as $cartype)
-                                                <option value="{{$cartype->id}}">{{$cartype->name}}</option>
-                                            @endforeach
+                                            <select name="brand" class=" form-controls"  >
+                                                @foreach(\App\Brand::all() as $brand)
+                                                    <option value="{{$brand->id}}">{{$brand->name}}</option>
+                                                @endforeach
 
-                                        </select>
+                                            </select>
                                         </div>
 
                                     </div>
+
                                     <div class="form-group row">
-                                        <label for="info" class="col-md-4 col-form-label text-md-right">{{ __('اطلاعات محصول') }}</label>
+                                        <label for="info" class="col-md-4 col-form-label text-md-right">{{ __('اطلاعات ماشین') }}</label>
 
                                         <div class="col-md-6">
                                             <textarea name="info" id="info" cols="30" rows="10"  class="form-control @error('info') is-invalid @enderror" name="info" value="">{{$brand->info}}</textarea>
 
-                                            {{--                                            <input id="info" type="text" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات محصول را وارد نمایید">--}}
+                                            {{--                                            <input id="info" type="text" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات ماشین را وارد نمایید">--}}
 
                                             @error('info')
                                             <span class="invalid-feedback" role="alert">
@@ -73,10 +75,10 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="file" class="col-md-4 col-form-label text-md-right">{{ __('تصویر محصول') }}</label>
+                                        <label for="file" class="col-md-4 col-form-label text-md-right">{{ __('تصویر ماشین') }}</label>
 
                                         <div class="col-md-6">
-                                            <input id="image" type="file" class="form-control @error('file') is-invalid @enderror" name="image"  placeholder="تصویر محصول را وارد نمایید">
+                                            <input id="image" type="file" class="form-control @error('file') is-invalid @enderror" name="image"  placeholder="تصویر ماشین را وارد نمایید">
 
                                             @error('file')
                                             <span class="invalid-feedback" role="alert">

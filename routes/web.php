@@ -36,8 +36,8 @@ Route::prefix('admin')->namespace('Admin')->group(function (){
 
     Route::get('/brand','BrandController@create')->name('brand');
     Route::post('/brand','BrandController@store');
-    Route::get('/brand/{brand}/edit','BrandController@edit');
-    Route::post('/brand/{brand}/edit','BrandController@update');
+    Route::get('/brand/{brand}/edit','BrandController@edit')->name('edit_brand');;
+    Route::put('/brand/{brand}/edit','BrandController@update');
 
 });
 
