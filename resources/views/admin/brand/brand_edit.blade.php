@@ -19,9 +19,9 @@
     </nav>
     <header class="masthead bg-primary text-black-50 text-center">
         <div class="container d-flex align-items-center flex-column">
-            <div class="container">
+            <div class="container" >
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" style="font-family: 'Vazir', sans-serif;">
                     <div class="col-md-8">
                         <div class="card">
                             <div class="card-header">{{ __('بروزرسانی برند') }}</div>
@@ -67,8 +67,19 @@
                                         <div class="col-md-6">
                                             <img  class=" img-fluid img-thumbnail " src="{{\Illuminate\Support\Facades\URL::asset($brand->logo_url)}}">
 
-                                            <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image"  placeholder="لوگو را وارد نمایید"
-                                                   value="#">
+                                            <p>
+                                                <input id="file" type="file" class="form-control @error('image') is-invalid @enderror" name="image"  placeholder="لوگو را وارد نمایید"
+                                                       value="#" onchange="loadFile(event)">
+                                                <img class=" img-fluid img-thumbnail " id="output"   alt=""/>
+                                            </p>
+                                            <script>
+                                                var loadFile = function(event) {
+                                                    var image = document.getElementById('output');
+                                                    image.src = URL.createObjectURL(event.target.files[0]);
+                                                };
+                                            </script>
+
+
 
 
                                             @error('image')
@@ -96,7 +107,9 @@
         </div>
     </header>
 
+    {{----}}
 
+    {{--    --}}
 
 @endsection
 
