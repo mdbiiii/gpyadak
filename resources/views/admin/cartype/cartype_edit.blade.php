@@ -19,22 +19,23 @@
     </nav>
     <header class="masthead bg-primary text-black-50 text-center">
         <div class="container d-flex align-items-center flex-column">
-            <div class="container">
+            <div class="container" >
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" style="font-family: 'Vazir', sans-serif;">
                     <div class="col-md-8">
                         <div class="card">
-                            <div class="card-header">{{ __('ایجاد ماشین') }}</div>
+                            <div class="card-header">{{ __('بروزرسانی ماشین') }}</div>
 
                             <div class="card-body">
-                                <form method="POST" action="{{ route('cartype') }}" enctype="multipart/form-data">
+                                <form method="POST" action="/admin/cartype/{{$cartype->id}}/edit" enctype="multipart/form-data">
                                     @csrf
+                                    @method('put')
 
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نام ماشین') }}</label>
 
                                         <div class="col-md-6">
-                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{ old('name') }}"  autofocus placeholder="نام ماشین را وارد نمایید">
+                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{$cartype->name}}"  >
 
                                             @error('name')
                                             <span class="invalid-feedback" role="alert">
@@ -45,26 +46,11 @@
                                     </div>
 
                                     <div class="form-group row">
-                                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نوع ماشین') }}</label>
-                                        <div class="col-md-6">
-
-                                            <select name="brand" class=" form-controls"  >
-                                                @foreach(\App\Brand::all() as $brand)
-                                                    <option value="{{$brand->id}}">{{$brand->name}}</option>
-                                                @endforeach
-
-                                            </select>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="form-group row">
                                         <label for="info" class="col-md-4 col-form-label text-md-right">{{ __('اطلاعات ماشین') }}</label>
 
                                         <div class="col-md-6">
-                                            <textarea name="info" id="info" cols="30" rows="10"  class="form-control @error('info') is-invalid @enderror" name="info" value="">{{$brand->info}}</textarea>
 
-                                            {{--                                            <input id="info" type="text" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات ماشین را وارد نمایید">--}}
+                                            <textarea name="info" id="info" cols="30" rows="10"  class="form-control @error('info') is-invalid @enderror" name="info" value="">{{$cartype->info}}</textarea>
 
                                             @error('info')
                                             <span class="invalid-feedback" role="alert">
@@ -78,9 +64,24 @@
                                         <label for="file" class="col-md-4 col-form-label text-md-right">{{ __('تصویر ماشین') }}</label>
 
                                         <div class="col-md-6">
-                                            <input id="image" type="file" class="form-control @error('file') is-invalid @enderror" name="image"  placeholder="تصویر ماشین را وارد نمایید">
+                                            <img  class=" img-fluid img-thumbnail " src="{{\Illuminate\Support\Facades\URL::asset($cartype->image_url)}}">
 
-                                            @error('file')
+                                            <p>
+                                                <input id="file" type="file" class="form-control @error('image') is-invalid @enderror" name="image"
+                                                       value="#" onchange="loadFile(event)">
+                                                <img class=" img-fluid img-thumbnail " id="output"   alt=""/>
+                                            </p>
+                                            <script>
+                                                var loadFile = function(event) {
+                                                    var image = document.getElementById('output');
+                                                    image.src = URL.createObjectURL(event.target.files[0]);
+                                                };
+                                            </script>
+
+
+
+
+                                            @error('image')
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -91,7 +92,7 @@
                                     <div class="form-group row mb-0">
                                         <div class="col-md-6 offset-md-4">
                                             <button type="submit" class="btn btn-primary">
-                                                {{ __('ثبت') }}
+                                                {{ __('بروزرسانی') }}
                                             </button>
 
                                         </div>
@@ -105,7 +106,9 @@
         </div>
     </header>
 
+    {{----}}
 
+    {{--    --}}
 
 @endsection
 

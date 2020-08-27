@@ -27,7 +27,7 @@
                             <div class="card-header">{{ __('ایجاد برند') }}</div>
 
                             <div class="card-body">
-                                <form method="POST" action="{{ route('brand') }}" enctype="multipart/form-data">
+                                <form method="POST" action="{{ route('create_brand') }}" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="form-group row">
@@ -48,8 +48,11 @@
                                         <label for="info" class="col-md-4 col-form-label text-md-right">{{ __('اطلاعات برند') }}</label>
 
                                         <div class="col-md-6">
-                                            <input id="info" type="text" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات برند را وارد نمایید">
+{{--                                            <input id="info" type="text" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات برند را وارد نمایید">--}}
 
+                                            <textarea id="info" type="text" class="form-control @error('info') is-invalid @enderror" name="info"  placeholder="اطلاعات برند را وارد نمایید">
+
+                                            </textarea>
                                             @error('info')
                                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

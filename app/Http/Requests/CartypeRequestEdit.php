@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CartypeRequest extends FormRequest
+class CartypeRequestEdit extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,7 @@ class CartypeRequest extends FormRequest
         return [
             'name'=>'required',
             'info'=>'required',
-            'image'=>'required|mimes:jpeg,jpg,bmp,png|max:10240'
+            'image'=>'sometimes|mimes:jpeg,jpg,bmp,png|max:10240'
         ];
     }
 }

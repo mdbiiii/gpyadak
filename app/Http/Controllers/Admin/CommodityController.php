@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Commodity;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CommodityRequest;
+use App\Http\Requests\CommodityRequestCreate;
+use App\Http\Requests\CommodityRequestEdit;
 use Illuminate\Http\Request;
+use SebastianBergmann\CodeCoverage\TestFixture\C;
 
 class CommodityController extends Controller
 {
@@ -35,7 +37,7 @@ class CommodityController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CommodityRequest $request)
+    public function store(CommodityRequestCreate $request)
     {
         $valid_data=$request->validated();
 
@@ -78,7 +80,9 @@ class CommodityController extends Controller
      */
     public function show(Commodity $commodity)
     {
-        //
+        return view('admin.commodity.commodity_show',[
+            'commodities'=> Commodity::all(),
+        ]);
     }
 
     /**
@@ -89,7 +93,9 @@ class CommodityController extends Controller
      */
     public function edit(Commodity $commodity)
     {
-        //
+        return view('admin.commodity.commodity_edit',[
+            'commodity'=> $commodity,
+        ]);
     }
 
     /**
@@ -99,9 +105,42 @@ class CommodityController extends Controller
      * @param  \App\Commodity  $commodity
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Commodity $commodity)
+    public function update(CommodityRequestEdit $request, Commodity $commodity)
     {
-        //
+
+        if(!($request->hasFile('image'))){
+
+            $valid_data=$request->validate([
+                'name'=>'required',
+                'info'=>'required',
+            ]);
+            $commodity->update([
+                'name'=>$valid_data['name'],
+                'info'=>$valid_data['info'],
+
+            ]);
+
+        }else{
+
+            $valid_data=$request->validated();
+            $file=$request->file('image');
+
+            $file_name=$file->getClientOriginalName();
+
+            $file_path="upload/commodity/{$file_name}";
+            $file_url=url("{$file_path}/{$file_name}");
+
+            $file->move(public_path($file_path),$file_name);
+
+            $commodity->update([
+                'name'=>$valid_data['name'],
+                'info'=>$valid_data['info'],
+                'image_url'=>$file_url,
+            ]);
+        }
+
+
+        return redirect(route('show_commodity'));
     }
 
     /**
@@ -112,6 +151,7 @@ class CommodityController extends Controller
      */
     public function destroy(Commodity $commodity)
     {
-        //
+       $commodity->delete();
+       return back();
     }
 }

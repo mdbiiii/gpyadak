@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Cartype;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CartypeRequest;
+use App\Http\Requests\CartypeRequestCreate;
+use App\Http\Requests\CartypeRequestEdit;
 use Illuminate\Http\Request;
 
 class CartypeController extends Controller
@@ -35,7 +36,7 @@ class CartypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CartypeRequest $request)
+    public function store(CartypeRequestCreate $request)
     {
         $valid_data=$request->validated();
 
@@ -62,7 +63,7 @@ class CartypeController extends Controller
 
 
 
-        return redirect(route('cartype'));
+        return redirect(route('create_cartype'));
     }
 
     /**
@@ -73,7 +74,9 @@ class CartypeController extends Controller
      */
     public function show(Cartype $cartype)
     {
-        //
+        return view('admin.cartype.cartype_show',[
+            'cartypes'=> Cartype::all(),
+        ]);
     }
 
     /**
@@ -84,7 +87,9 @@ class CartypeController extends Controller
      */
     public function edit(Cartype $cartype)
     {
-        //
+        return view('admin.cartype.cartype_edit',[
+            'cartype'=> $cartype,
+        ]);
     }
 
     /**
@@ -94,19 +99,55 @@ class CartypeController extends Controller
      * @param  \App\Cartype  $cartype
      * @return \Illuminate\Http\Response
      */
-    public function update(CartypeRequest $request, Cartype $cartype)
+    public function update(CartypeRequestEdit $request, Cartype $cartype)
     {
-        //
+
+
+        if(!($request->hasFile('image'))){
+
+            $valid_data=$request->validate([
+                'name'=>'required',
+                'info'=>'required',
+            ]);
+            $cartype->update([
+                'name'=>$valid_data['name'],
+                'info'=>$valid_data['info'],
+
+            ]);
+
+        }else{
+
+            $valid_data=$request->validated();
+            $file=$request->file('image');
+
+            $file_name=$file->getClientOriginalName();
+
+            $file_path="upload/cartype/{$file_name}";
+            $file_url=url("{$file_path}/{$file_name}");
+
+            $file->move(public_path($file_path),$file_name);
+
+            $cartype->update([
+                'name'=>$valid_data['name'],
+                'info'=>$valid_data['info'],
+                'image_url'=>$file_url,
+            ]);
+        }
+
+
+        return redirect(route('show_cartype'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Cartype  $cartype
+     * @param \App\Cartype $cartype
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Cartype $cartype)
     {
-        //
+        $cartype->delete();
+        return back();
     }
 }

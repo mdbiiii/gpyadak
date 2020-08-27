@@ -39,7 +39,7 @@
 
                             <div class="card-body">
 
-                                <a href="{{route('brand')}}" class="btn btn-dark">برای وارد کردن برند جدید کلیک کنید</a>
+                                <a href="{{route('create_brand')}}" class="btn btn-dark">برای وارد کردن برند جدید کلیک کنید</a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
 
                             <div class="card-body">
 
-                                <a href="{{route('cartype')}}" class="btn btn-dark">برای وارد کردن ماشین جدید کلیک کنید</a>
+                                <a href="{{route('create_cartype')}}" class="btn btn-dark">برای وارد کردن ماشین جدید کلیک کنید</a>
                             </div>
                         </div>
                     </div>

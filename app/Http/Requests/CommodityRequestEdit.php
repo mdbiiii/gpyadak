@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CommodityRequest extends FormRequest
+class CommodityRequestEdit extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,7 @@ class CommodityRequest extends FormRequest
         return [
             'name'=>'required',
             'info'=>'required',
-            'image'=>'required|mimes:jpeg,jpg,bmp,png|max:10240'
+            'image'=>'sometimes|mimes:jpeg,jpg,bmp,png|max:10240'
 
         ];
     }

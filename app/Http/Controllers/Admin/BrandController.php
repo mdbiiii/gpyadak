@@ -59,7 +59,7 @@ class BrandController extends Controller
         ]);
         // save in data base
 
-        return redirect(route('brand'));
+        return redirect(route('create_brandbrand'));
 
 
     }
@@ -72,7 +72,9 @@ class BrandController extends Controller
      */
     public function show(Brand $brand)
     {
-        //
+        return view('admin.brand.brand_show',[
+            'brands'=> Brand::all(),
+        ]);
     }
 
     /**
@@ -133,7 +135,7 @@ class BrandController extends Controller
         }
 
 
-       return redirect()->back();
+       return redirect(route('show_brand'));
     }
 
     /**
@@ -144,6 +146,9 @@ class BrandController extends Controller
      */
     public function destroy(Brand $brand)
     {
-        //
+        $brand->delete();
+        return back();
+
+
     }
 }
