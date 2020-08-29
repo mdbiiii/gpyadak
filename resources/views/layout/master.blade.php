@@ -47,17 +47,17 @@
                     <tr>
                         <th scope="row">دفتر فروش</th>
                         <td > <br>
-                            021-456789 <br>
-                            021-456789 <br>
-                            021-456789 <br>
-                            021-456789
+                            {{english2persian("885698456-021")}} <br>
+                            {{english2persian("885698456-021")}} <br>
+                            {{english2persian("885698456-021")}}<br>
+                            {{english2persian("885698456-021")}}
                         </td>
 
                     </tr>
                     <tr>
                         <th scope="row">موبایل</th>
-                        <td>09126412802 <br>
-                            09126412802
+                        <td>{{english2persian("09126452317")}} <br>
+                            {{english2persian("09126452317")}}
                         </td>
 
                     </tr>

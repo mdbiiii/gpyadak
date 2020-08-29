@@ -313,13 +313,13 @@
                             </div>
                             <div class="text-muted">تلگرام</div>
                             <div class="lead font-weight-bold"><hr>@gunnerparts_support<br>
-                                09193456987</div>
+                                {{english2persian("09126452317")}}</div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-                            <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="mailto:name@example.com"><hr>09121234567</a>
+                            <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="mailto:name@example.com"><hr>{{english2persian("09126452317")}}</a>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -336,14 +336,14 @@
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fa fa-mobile-alt"></i></div>
                             <div class="text-muted">شماره همراه</div>
-                            <a class="lead font-weight-bold" href="#"><hr>09126412888</a>
+                            <a class="lead font-weight-bold" href="#"><hr>{{english2persian("09126452317")}}</a>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fas fa-phone"></i></div>
                             <div class="text-muted">دفتر فروش</div><a class="lead font-weight-normal" href="#">
-                                <hr>021-885698456<br>021-889456241<br>021-456987456</a>
+                                <hr>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}</a>
                         </div>
                     </div>
                 </div>
