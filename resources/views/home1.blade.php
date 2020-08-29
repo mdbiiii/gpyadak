@@ -1,4 +1,4 @@
-<div style="font-family: Vazir">
+<div style="font-family: 'Vazir'">
 
 
     @extends('layout.master')
@@ -54,19 +54,27 @@
                 <div class="col-lg-6 ml-auto">
                     <div class="container d-flex align-items-center flex-column">
                         <!-- Masthead Heading-->
-                        <h1 class="masthead-heading mb-0">گانر ‍‍ پارت</h1>
-                        <!-- Icon Divider-->
-                        <div class="divider-custom divider-light">
-                            <div class="divider-custom-line"></div>
-                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                            <div class="divider-custom-line"></div>
+                        <div class="row" >
+                            <div class="" style="background: #17a2b8 !important">
+                                <div class=" card-img">
+                                    <img class="img-responsive" src="/assets/img/fake.png" alt="">
+                                </div>
+                            </div>
+                            <div class="" style="background: #17a2b8 !important">
+                                <div class=" card-img ">
+                                    <img class="img-responsive" src="/assets/img/orginal2.png" alt="">
+                                </div>
+                            </div>
+
                         </div>
-                        <!-- Masthead Subheading-->
-                        <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا</p>
-                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0 " > تامین قطعات یدکی هیوندا و کیا </p>
-                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0" > مشاوره رایگان از استعلام تا تحویل کالا</p>
+                        <br>
+                        <div class="row">
+                            <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهیدا</p>
+
+
+                        </div>
+
+
 
                     </div>
                 </div>
@@ -93,39 +101,129 @@
             </div>
 
         </header>
+
+{{-- kia and hyiona--}}
+        <div class="row">
+            <div class="col-lg-6 mr-auto">
+                <section class="page-section" id="kia">
+                    <div class="container">
+                        <div class="text-right">
+                            <h4 class=" text-secondary mb-0 d-inline-block">قطعات یدکی کیا</h4>
+
+                        </div>
+                        <hr style="color: #1a252f">
+                        <div class="row">
+                            @foreach($commodities as $commodity)
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thumbnail text-center">
+                                        <span class="mojod"></span>
+                                        <a href="products?id=سنگ_در_پوش_DR05" target="_blank">
+                                            <img class="img-responsive img-fluid imglazyload" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
+                                        </a>
+                                        <a href="products?id=سنگ_در_پوش_DR05" target="_blank">
+                                            <h5 class="onvan">سنگ در پوش DR05</h5>
+                                        </a> متر مربع <span class="text-success">40,000 تومان</span><br><br>
+                                        <a href="products?id=سنگ_در_پوش_DR05" class="btn btn-success btn-sm" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
+                                            <i class="fa fa-shopping-cart"></i> خرید</a>
+                                        <a href="javascript:;" onclick="compare_add(2330);" class="btn btn-info btn-sm">
+                                            <i class="fa fa-th-list"></i> مقایسه</a>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+
+
+
+                    </div>
+                </section>
+
+            </div>
+            <div class="col-lg-6 ml-auto">
+                <section class="page-section" id="hiyonda">
+        <div class="container">
+            <div class="text-right">
+                <h4 class=" text-secondary mb-0 d-inline-block">قطعات یدکی هیوندا</h4>
+
+            </div>
+            <hr style="color: #1a252f">
+            <div class="row">
+                @foreach($commodities as $commodity)
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="thumbnail text-center">
+                            <span class="mojod"></span>
+                            <a href="products?id=سنگ_در_پوش_DR05" target="_blank">
+                                <img class="img-responsive img-fluid imglazyload" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
+                            </a>
+                            <a href="products?id=سنگ_در_پوش_DR05" target="_blank">
+                                <h5 class="onvan">سنگ در پوش DR05</h5>
+                            </a> متر مربع <span class="text-success">40,000 تومان</span><br><br>
+                            <a href="products?id=سنگ_در_پوش_DR05" class="btn btn-success btn-sm" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
+                                <i class="fa fa-shopping-cart"></i> خرید</a>
+                            <a href="javascript:;" onclick="compare_add(2330);" class="btn btn-info btn-sm">
+                                <i class="fa fa-th-list"></i> مقایسه</a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+
+
+        </div>
+    </section>
+            </div>
+
+        </div>
+        {{-- kia and hyiona--}}
+
+    <!-- Portfolio Modal-->
         <section   class="page-section portfolio" id="portfolio">
+
             <div  class="container">
+
                 <!-- Portfolio Section Heading-->
-                <div class="text-center">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">محصولات</h2>
+                <div class="text-right">
+                    <h4 class=" text-secondary mb-0 d-inline-block">قطعات یدکی</h4>
                 </div>
                 <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
+                <hr style="color: #1a252f">
+{{--                <div class="divider-custom ">--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                    <div class="divider-custom-line"></div>--}}
+{{--                </div>--}}
                 <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" style="background: snow">
                     <!-- Portfolio Items-->
 
 
                     @foreach($commodities as $commodity)
 
-                        <div class="col-md-6 col-lg-4 mb-5">
-                            <div class="card ">
+{{--                        <div class="col-md-6 col-lg-4 mb-5">--}}
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <div class="card border-secondary " >
                                 {{--                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#mymodal{{$commodity->id}}l">--}}
                                 <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#mymodal{{$commodity->id}}">
                                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                         <div class="portfolio-item-caption-content text-center text-white">
-                                            <i class="fas fa-plus fa-3x"></i>
+                                            <i class="fas fa-plus fa-1x"></i>
                                         </div>
                                     </div>
 
-                                    <img    class="img-responsive  img-fluid img-thumbnail card-img-top" src="{{$commodity->file_url}}" alt="{{$commodity->name}}"/>
-                                    <div class="card-body text-right">
+                                    <img    class="img-responsive  img-fluid  card-img-top" src="{{$commodity->image_url}}" alt="{{$commodity->name}}"/>
+                                    <div class="card-body text-center">
                                         <h6  class="card-title">{{$commodity->name}}</h6>
-                                        <p  class="card-text text-info">جهت دریافت اطلاعات بیشتر اینجا کلیک کنید یا با تماس بگیرید</p>
+                                        <hr>
+                                        <h6 style="color: #0f6674"> جهت مشاهده اطلاعات بیشتر کلیک کنید</h6>
+                                        <hr>
+                                        <h6> جهت دریافت مشاوره تماس بگیرید</h6>
+
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +245,7 @@
                                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                                         <div class="divider-custom-line"></div>
                                                     </div>
-                                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{{$commodity->file_url}}" alt="{{$commodity->name}}"/>
+                                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{{$commodity->image_url}}" alt="{{$commodity->name}}"/>
                                                     <!-- Portfolio Modal - Text-->
                                                     <p class="mb-5">{{$commodity->info}}</p>
                                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
@@ -166,6 +264,8 @@
             </div>
         </section>
         <!-- Portfolio Modal-->
+
+        <!-- about-->
         <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- About Section Heading-->
@@ -181,7 +281,7 @@
                 <!-- About Section Content-->
                 <div class="row">
                     <div class="col-lg-4 ml-auto">
-                        <p class="pre-wrap lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+                        <p class="pre-wrap lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source images including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
                     </div>
                     <div class="col-lg-4 mr-auto">
                         <p class="pre-wrap lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
@@ -189,7 +289,9 @@
                 </div>
             </div>
         </section>
+        <!-- about-->
 
+        <!-- contact-->
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
@@ -247,7 +349,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- contact-->
     @endsection
     @section('copyright')
         <section class="copyright py-4 text-center text-white">

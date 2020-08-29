@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ">
+<html lang="en" >
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,45 +39,37 @@
                 <h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>
             </div>
             <!-- Footer About Text-->
-            <div class="col-lg-4">
-                <h4 class="mb-4">ABOUT FREELANCER</h4>
-                <table class="contact-table" width="100%" border="0" cellpadding="2">
+            <div class="col-lg-4" dir="rtl" >
+                <h4 class="mb-4" dir="rtl">ABOUT FREELANCER</h4>
+                <table class="table table-borderless table-info contact-table text-white">
+
                     <tbody>
                     <tr>
                         <th scope="row">دفتر فروش</th>
-                        <td>
-                            <a href="tel:02133979370">۰۲۱ - ۳۳ ۹۷ ۹۳ ۷۰</a>
-                            <br>
-                            <a href="tel:02133946788">۰۲۱ - ۳۳ ۹۴ ۶۷ ۸۸</a>
-                            <br>
-                            <a href="tel:02136619809">۰۲۱ - ۳۶۶ ۱۹ ۸۰۹</a>
-                            <br>
-                            <a href="tel:02136619432">۰۲۱ - ۳۶۶ ۱۹ ۴۳۲</a>
+                        <td > <br>
+                            021-456789 <br>
+                            021-456789 <br>
+                            021-456789 <br>
+                            021-456789
                         </td>
+
                     </tr>
                     <tr>
                         <th scope="row">موبایل</th>
-                        <td>
-                            <a href="tel:09120818355">۰۹۱۲ - ۰۸۱ ۸۳ ۵۵</a>
-
+                        <td>09126412802 <br>
+                            09126412802
                         </td>
+
                     </tr>
                     <tr>
-                        <th scope="row">تلگرام / واتس اپ<br><a class="contact-telegram" title="لینک تلگرام" href="https://telegram.me/YadakShop_support">
+                        <th scope="row">تلگرام</th>
+                        <td>Jacob</td>
 
-                                <img alt="telegram" title="تلگرام" src="https://yadak.shop/wp-content/uploads/2018/06/Telegram-logo.png"></a>
-                            <a class="contact-telegram" title="لینک واتساپ" href="https://wa.me/989120818355">
-                                <img alt="whatsapp" title="واتساپ" src="https://yadak.shop/wp-content/uploads/2018/06/Whatsapp-logo.png"></a>
+                    </tr>
+                    <tr>
+                        <th scope="row">واتساپ</th>
+                        <td>Larry</td>
 
-
-                        </th>
-                        <td><a title="لینک تلگرام" href="https://telegram.me/YadakShop_support">@YadakShop_support</a>
-
-                            <br>
-                            <a href="tel:09120818355">۰۹۱۲ - ۰۸۱ ۸۳ ۵۵</a>
-
-
-                        </td>
                     </tr>
                     </tbody>
                 </table>

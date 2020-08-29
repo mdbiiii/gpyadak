@@ -15,3 +15,11 @@ body{margin:0;
 .card{
     font-family: 'Vazir', monospace;
 }
+
+
+table.contact-table td{direction:ltr!important;}
+table.contact-table{ background: #2ca3d7;border-radius:5px;line-height:24px;font-size:14px;}
+table.contact-table td{padding:2% 4%}.contact-telegram img{width:22px;margin-bottom:1%}
+table.contact-table tr:nth-child(2n){}.contact-table a{color:#2ca3d7}.contact-table th{font-size:13px;font-weight:700;vertical-align:middle;color: #f9fff9
+                                                                     }
+table.contact-table tr:nth-child(3n) th,table.contact-table tr:nth-child(3n) td{padding:3% 4%}
