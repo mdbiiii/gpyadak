@@ -1,4 +1,4 @@
-<div style="font-family: 'Vazir'">
+<div style="font-family: 'Vazir',serif">
 
 
     @extends('layout.master')
