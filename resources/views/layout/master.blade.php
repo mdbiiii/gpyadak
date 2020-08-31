@@ -18,7 +18,37 @@
 
 
 <body id="page-top">
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+    <div class="container">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">MDBI
 
+                    <img src="/assets/img/Hyundai.png">
+                    <img src="/assets/img/Kia.png">
+                </a>
+            </li>
+            @yield('login')
+
+        </ul>
+
+        <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">محصولات</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">درباره ما</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">تماس با ما</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
 @yield('content')
 
 <footer class="footer text-center">
@@ -41,7 +71,7 @@
             <!-- Footer About Text-->
             <div class="col-lg-4" dir="rtl" >
                 <h4 class="mb-4" dir="rtl">ABOUT FREELANCER</h4>
-                <table class="table table-borderless table-info contact-table text-white">
+                <table class="table table-borderless bg-primary contact-table text-white">
 
                     <tbody>
                     <tr>
@@ -72,6 +102,7 @@
 
                     </tr>
                     </tbody>
+
                 </table>
             </div>
         </div>

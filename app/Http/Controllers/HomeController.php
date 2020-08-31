@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Commodity;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    use Sluggable;
     /**
      * Create a new controller instance.
      *
@@ -25,6 +25,7 @@ class HomeController extends Controller
     public function index()
     {
 
+
         $commodities=Commodity::all();
         if (count($commodities)>5){
             $choose=$commodities->random(6);
@@ -38,4 +39,5 @@ class HomeController extends Controller
             'commodities'=>$choose
         ]);
     }
+
 }

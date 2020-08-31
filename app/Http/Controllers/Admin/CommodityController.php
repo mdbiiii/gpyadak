@@ -154,4 +154,13 @@ class CommodityController extends Controller
        $commodity->delete();
        return back();
     }
+
+
+
+    public function show_commo(Commodity $commodity)
+    {
+        return view('commo_info',[
+            'commodity'=> $commodity,
+        ]);
+    }
 }

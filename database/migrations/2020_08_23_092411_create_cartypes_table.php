@@ -15,7 +15,7 @@ class CreateCartypesTable extends Migration
     {
         Schema::create('cartypes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('brand_id');
+            $table->unsignedBigInteger('brand_id')->nullable();
             $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
             $table->string('name');
             $table->text('info');

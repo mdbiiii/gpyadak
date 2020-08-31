@@ -33,6 +33,8 @@ Route::prefix('admin')->namespace('Admin')->group(function (){
     Route::put('/commodity/{commodity}/edit','CommodityController@update');
     Route::get('/commodity/show','CommodityController@show')->name('show_commodity');
     Route::delete('/commodity/{commodity}/delete','CommodityController@destroy');
+    Route::get('/commodity/{commodity}','CommodityController@show_commo')->name('show_1_commodity');
+
 
 //Car type routs
     Route::get('/cartype','CartypeController@create')->name('create_cartype');

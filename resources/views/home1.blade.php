@@ -3,52 +3,26 @@
 
     @extends('layout.master')
     @section('content')
+        @section('login')
+        @if(auth()->check())
+            <li class="nav-item mx-0 mx-lg-1">
+                {{--                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>--}}
+                {{--                        <a href="{{route('index')}}"class="btn badge-light">داشبورد</a>--}}
 
-        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-            <div class="container">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1">
-                        <a class="navbar-brand js-scroll-trigger" href="#page-top">MDBI
+                <form action="{{route('logout')}}" method="post">
+                    @csrf
+                    <button class="btn btn-danger">خروج</button>
+                </form>
 
-                            <img src="/assets/img/Hyundai.png">
-                            <img src="/assets/img/Kia.png">
-                        </a>
-                    </li>
-                    @if(auth()->check())
-                        <li class="nav-item mx-0 mx-lg-1">
-                            {{--                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>--}}
-                            {{--                        <a href="{{route('index')}}"class="btn badge-light">داشبورد</a>--}}
+            </li>
+        @else
+            <li class="nav-item mx-0 mx-lg-1">
+                <a href="{{route('login')}}" class="badge-light py-3 px-0 px-lg-3 rounded navbar-light">ورود</a>
+            </li>
+        @endif
+            @endsection
 
-                            <form action="{{route('logout')}}" method="post">
-                                @csrf
-                                <button class="btn btn-danger">خروج</button>
-                            </form>
 
-                        </li>
-                    @else
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a href="{{route('login')}}" class="badge-light py-3 px-0 px-lg-3 rounded navbar-light">ورود</a>
-                        </li>
-                    @endif
-                </ul>
-
-                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">محصولات</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">درباره ما</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">تماس با ما</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
         <header class="masthead bg-primary text-white text-center">
             <div class="row">
                 <div class="col-lg-6 ml-auto">
@@ -103,7 +77,7 @@
         </header>
 
 {{-- kia and hyiona--}}
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-6 mr-auto">
                 <section class="page-section" id="kia">
                     <div class="container">

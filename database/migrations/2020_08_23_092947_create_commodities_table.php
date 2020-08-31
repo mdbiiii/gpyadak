@@ -15,7 +15,7 @@ class CreateCommoditiesTable extends Migration
     {
         Schema::create('commodities', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('cartype_id');
+            $table->unsignedBigInteger('cartype_id')->nullable();
             $table->foreign('cartype_id')->references('id')->on('cartypes')->onDelete('cascade');
             $table->string('name');
             $table->text('info');

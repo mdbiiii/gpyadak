@@ -59,7 +59,7 @@ class BrandController extends Controller
         ]);
         // save in data base
 
-        return redirect(route('create_brandbrand'));
+        return redirect(route('create_brand'));
 
 
     }
