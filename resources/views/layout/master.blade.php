@@ -18,22 +18,23 @@
 
 
 <body id="page-top">
-<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav" dir="rtl">
     <div class="container">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">GunnerPart
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                    <img src="/assets/img/PSD.png" style="width: 125px;margin:auto;" >GunnerPart
 {{--                    <img src="/assets/img/gun.png" style="width: 45px;margin: -10px -3px 0 0;">--}}
-                    <img src="/assets/img/logo.png" style="width: 60px;margin:auto;" >
-                    <img src="/assets/img/Hyundai.png">
-                    <img src="/assets/img/Kia.png">
+
+{{--                    <img src="/assets/img/Hyundai.png">--}}
+{{--                    <img src="/assets/img/Kia.png">--}}
                 </a>
             </li>
             @yield('login')
 
         </ul>
 
-        <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+        <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-secondary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
 

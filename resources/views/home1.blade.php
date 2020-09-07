@@ -3,55 +3,11 @@
 
     @extends('layout.master')
     @section('content')
-        @section('login')
-        @if(auth()->check())
-            <li class="nav-item mx-0 mx-lg-1">
-                {{--                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>--}}
-                {{--                        <a href="{{route('index')}}"class="btn badge-light">داشبورد</a>--}}
 
-                <form action="{{route('logout')}}" method="post">
-                    @csrf
-                    <button class="btn btn-danger">خروج</button>
-                </form>
-
-            </li>
-        @else
-            <li class="nav-item mx-0 mx-lg-1">
-                <a href="{{route('login')}}" class="badge-light py-3 px-0 px-lg-3 rounded navbar-light">ورود</a>
-            </li>
-        @endif
-            @endsection
 
 
         <header class="masthead bg-primary text-white text-center">
             <div class="row">
-                <div class="col-lg-6 ml-auto">
-                    <div class="container d-flex align-items-center flex-column">
-                        <!-- Masthead Heading-->
-                        <div class="row" >
-{{--                            <div class="" style="background: #17a2b8 !important">--}}
-{{--                                <div class=" card-img">--}}
-{{--                                    <img class="img-responsive" src="/assets/img/fake.png" alt="">--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-                            <div class="" style="background: #17a2b8 !important">
-                                <div class=" card-img ">
-                                    <img class="img-responsive" src="/assets/img/parts.png" alt="قطعات یدکی">
-                                </div>
-                            </div>
-
-                        </div>
-                        <br>
-                        <div class="row">
-                            <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهید<img  src="/assets/img/fake.png" alt="کالای تقلبی" style="width: 60px"></p>
-
-
-                        </div>
-
-
-
-                    </div>
-                </div>
                 <div class="col-lg-6 mr-auto">
                     <div class="container d-flex align-items-center flex-column">
                         <!-- Masthead Heading-->
@@ -75,12 +31,46 @@
                     </div>
 
                 </div>
+                <br>
+                <div class="col-lg-6 ">
+                    <div class="container d-flex align-items-center flex-column">
+                        <!-- Masthead Heading-->
+                        <div class="row" >
+{{--                            <div class="" style="background: #17a2b8 !important">--}}
+{{--                                <div class=" card-img">--}}
+{{--                                    <img class="img-responsive" src="/assets/img/fake.png" alt="">--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+                            <div class="" style="background: #17a2b8 !important">
+                                <div class=" card-img ">
+                                    <img class="img-responsive" src="/assets/img/carpart.png" alt="قطعات یدکی">
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <p class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-dark mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهید<img  src="/assets/img/fake.png" alt="کالای تقلبی" style="width: 60px"></p>
+                            <br>
+
+                        </div>
+                        <div class="row mt-2">
+                            <p class="pre-wrap masthead-subheading  badge badge-pill badge-dark mb-0"  style="font-size: small">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید<img  src="/assets/img/call.png" alt="تماس" style="width: 60px"></p>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
             </div>
 
         </header>
 
 {{-- kia and hyiona--}}
-    <section class="page-section " id="kia">
+    <section class="page-section  " id="kia" >
         <div class="row justify-content-center">
             <div class="col-lg-6 mr-auto">
                 <section class="page-section" id="kia">
@@ -92,11 +82,12 @@
                         <hr style="color: #1a252f">
                         <div class="row">
                             @foreach($commodities as $commodity)
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1 ">
+
                                     <div class="thumbnail text-center">
                                         <span class="#"></span>
                                         <a href="/commodity/{{$commodity->id}}" target="_blank">
-                                            <img class="img-responsive img-fluid imglazyload" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
+                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
                                         </a>
                                         <a href="/commodity/{{$commodity->id}}" target="_blank">
                                             <h5 class="onvan">{{$commodity->name}}</h5>
@@ -105,6 +96,7 @@
                                             <i class="fa fa-phone"></i>تماس</a>
                                         <a href="/commodity/{{$commodity->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
                                             <i class="fa fa-th-list"></i> اطلاعات</a>
+                                        <hr>
                                     </div>
                                 </div>
                             @endforeach
@@ -126,11 +118,11 @@
                         <hr style="color: #1a252f">
                         <div class="row">
                             @foreach($commodities as $commodity)
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1">
                                     <div class="thumbnail text-center">
                                         <span class="#"></span>
                                         <a href="/commodity/{{$commodity->id}}" target="_blank">
-                                            <img class="img-responsive img-fluid imglazyload" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
+                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
                                         </a>
                                         <a href="/commodity/{{$commodity->id}}" target="_blank">
                                             <h5 class="onvan">{{$commodity->name}}</h5>
@@ -139,6 +131,7 @@
                                             <i class="fa fa-phone"></i>تماس</a>
                                         <a href="/commodity/{{$commodity->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
                                             <i class="fa fa-th-list"></i> اطلاعات</a>
+                                        <hr>
                                     </div>
                                 </div>
                             @endforeach
