@@ -29,21 +29,21 @@
                     <div class="container d-flex align-items-center flex-column">
                         <!-- Masthead Heading-->
                         <div class="row" >
-                            <div class="" style="background: #17a2b8 !important">
-                                <div class=" card-img">
-                                    <img class="img-responsive" src="/assets/img/fake.png" alt="">
-                                </div>
-                            </div>
+{{--                            <div class="" style="background: #17a2b8 !important">--}}
+{{--                                <div class=" card-img">--}}
+{{--                                    <img class="img-responsive" src="/assets/img/fake.png" alt="">--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <div class="" style="background: #17a2b8 !important">
                                 <div class=" card-img ">
-                                    <img class="img-responsive" src="/assets/img/orginal2.png" alt="">
+                                    <img class="img-responsive" src="/assets/img/parts.png" alt="قطعات یدکی">
                                 </div>
                             </div>
 
                         </div>
                         <br>
                         <div class="row">
-                            <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهیدا</p>
+                            <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهید<img  src="/assets/img/fake.png" alt="کالای تقلبی" style="width: 60px"></p>
 
 
                         </div>
@@ -63,11 +63,14 @@
                             <div class="divider-custom-line"></div>
                         </div>
                         <!-- Masthead Subheading-->
-                        <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا</p>
+
+                        <span class="pre-wrap masthead-subheading  font-weight-bold badge badge-pill badge-primary   mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا<img  src="/assets/img/export.png" alt="کالای تقلبی" style="width: 60px"></span>
                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0 " > تامین قطعات یدکی هیوندا و کیا </p>
+                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0 " > ضمانت اصالت قطعات یدکی هیوندا و کیا <img  src="/assets/img/asl.png" alt="کالای تقلبی" style="width: 60px"></span>
                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <p class="pre-wrap masthead-subheading font-weight-bold btn btn-dark mb-0" > مشاوره رایگان از استعلام تا تحویل کالا</p>
+                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > تحویل اکسپرس سریع کالا در سراسر کشور <img  src="/assets/img/delivery.png" alt="کالای تقلبی" style="width: 60px"></span>
+                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > مشاوره رایگان از استعلام تا تحویل کالا <img  src="/assets/img/moshavere.png" alt="کالای تقلبی" style="width: 50px"></span>
 
                     </div>
 
@@ -77,12 +80,13 @@
         </header>
 
 {{-- kia and hyiona--}}
+    <section class="page-section " id="kia">
         <div class="row justify-content-center">
             <div class="col-lg-6 mr-auto">
                 <section class="page-section" id="kia">
                     <div class="container">
                         <div class="text-right">
-                            <h4 class=" text-secondary mb-0 d-inline-block">قطعات یدکی کیا</h4>
+                            <h4 class=" text-secondary mb-0 d-inline-block"><img src="/assets/img/Kia.png">قطعات یدکی کیا</h4>
 
                         </div>
                         <hr style="color: #1a252f">
@@ -90,17 +94,17 @@
                             @foreach($commodities as $commodity)
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                     <div class="thumbnail text-center">
-                                        <span class="mojod"></span>
-                                        <a href="products?id=سنگ_در_پوش_DR05" target="_blank">
+                                        <span class="#"></span>
+                                        <a href="/commodity/{{$commodity->id}}" target="_blank">
                                             <img class="img-responsive img-fluid imglazyload" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
                                         </a>
-                                        <a href="products?id=سنگ_در_پوش_DR05" target="_blank">
-                                            <h5 class="onvan">سنگ در پوش DR05</h5>
-                                        </a> متر مربع <span class="text-success">40,000 تومان</span><br><br>
-                                        <a href="products?id=سنگ_در_پوش_DR05" class="btn btn-success btn-sm" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
-                                            <i class="fa fa-shopping-cart"></i> خرید</a>
-                                        <a href="javascript:;" onclick="compare_add(2330);" class="btn btn-info btn-sm">
-                                            <i class="fa fa-th-list"></i> مقایسه</a>
+                                        <a href="/commodity/{{$commodity->id}}" target="_blank">
+                                            <h5 class="onvan">{{$commodity->name}}</h5>
+                                        </a><a href="/commodity/{{$commodity->id}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
+                                        <a href="#contact" class="btn btn-success btn-sm rounded js-scroll-trigger active" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
+                                            <i class="fa fa-phone"></i>تماس</a>
+                                        <a href="/commodity/{{$commodity->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
+                                            <i class="fa fa-th-list"></i> اطلاعات</a>
                                     </div>
                                 </div>
                             @endforeach
@@ -114,39 +118,41 @@
             </div>
             <div class="col-lg-6 ml-auto">
                 <section class="page-section" id="hiyonda">
-        <div class="container">
-            <div class="text-right">
-                <h4 class=" text-secondary mb-0 d-inline-block">قطعات یدکی هیوندا</h4>
+                    <div class="container">
+                        <div class="text-right">
+                            <h4 class=" text-secondary mb-0 d-inline-block"><img src="/assets/img/Hyundai.png">قطعات یدکی هیوندا</h4>
 
-            </div>
-            <hr style="color: #1a252f">
-            <div class="row">
-                @foreach($commodities as $commodity)
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="thumbnail text-center">
-                            <span class="mojod"></span>
-                            <a href="products?id=سنگ_در_پوش_DR05" target="_blank">
-                                <img class="img-responsive img-fluid imglazyload" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
-                            </a>
-                            <a href="products?id=سنگ_در_پوش_DR05" target="_blank">
-                                <h5 class="onvan">سنگ در پوش DR05</h5>
-                            </a> متر مربع <span class="text-success">40,000 تومان</span><br><br>
-                            <a href="products?id=سنگ_در_پوش_DR05" class="btn btn-success btn-sm" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
-                                <i class="fa fa-shopping-cart"></i> خرید</a>
-                            <a href="javascript:;" onclick="compare_add(2330);" class="btn btn-info btn-sm">
-                                <i class="fa fa-th-list"></i> مقایسه</a>
                         </div>
+                        <hr style="color: #1a252f">
+                        <div class="row">
+                            @foreach($commodities as $commodity)
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="thumbnail text-center">
+                                        <span class="#"></span>
+                                        <a href="/commodity/{{$commodity->id}}" target="_blank">
+                                            <img class="img-responsive img-fluid imglazyload" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
+                                        </a>
+                                        <a href="/commodity/{{$commodity->id}}" target="_blank">
+                                            <h5 class="onvan">{{$commodity->name}}</h5>
+                                        </a><a href="/commodity/{{$commodity->id}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
+                                        <a href="#contact" class="btn btn-success btn-sm rounded js-scroll-trigger active" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
+                                            <i class="fa fa-phone"></i>تماس</a>
+                                        <a href="/commodity/{{$commodity->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
+                                            <i class="fa fa-th-list"></i> اطلاعات</a>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+
+
+
                     </div>
-                @endforeach
+                </section>
             </div>
-
-
 
         </div>
     </section>
-            </div>
 
-        </div>
         {{-- kia and hyiona--}}
 
     <!-- Portfolio Modal-->
@@ -160,18 +166,7 @@
                 </div>
                 <!-- Icon Divider-->
                 <hr style="color: #1a252f">
-{{--                <div class="divider-custom ">--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                    <div class="divider-custom-line"></div>--}}
-{{--                </div>--}}
+
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center" style="background: snow">
                     <!-- Portfolio Items-->
@@ -192,11 +187,14 @@
 
                                     <img    class="img-responsive  img-fluid  card-img-top" src="{{$commodity->image_url}}" alt="{{$commodity->name}}"/>
                                     <div class="card-body text-center">
-                                        <h6  class="card-title">{{$commodity->name}}</h6>
-                                        <hr>
-                                        <h6 style="color: #0f6674"> جهت مشاهده اطلاعات بیشتر کلیک کنید</h6>
-                                        <hr>
-                                        <h6> جهت دریافت مشاوره تماس بگیرید</h6>
+                                        <a href="admin/commodity/{{$commodity->id}}">
+                                            <h6  class="card-title">{{$commodity->name}}</h6>
+                                            <hr>
+                                            <h6 style="color: #0f6674"> جهت مشاهده اطلاعات بیشتر کلیک کنید</h6>
+                                            <hr>
+                                            <h6> جهت دریافت مشاوره تماس بگیرید</h6>
+                                        </a>
+
 
                                     </div>
                                 </div>
@@ -327,7 +325,7 @@
     @endsection
     @section('copyright')
         <section class="copyright py-4 text-center text-white">
-            <div class="container"><small class="pre-wrap">Copyright © MDBI 2020</small></div>
+            <div class="container"><small>تمامی حقوق مادی و معنوی این سایت متعلق به  مجموعه گانرپارت است</small><br><small class="pre-wrap">Copyright © MDBI 2020</small></div>
         </section>
     @endsection
 

@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    use Sluggable;
     /**
      * Create a new controller instance.
      *

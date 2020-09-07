@@ -9,12 +9,12 @@
                     <div class="row ">
                         <div class="container">
                             <div class="card mb-3 m-5">
-                                <img src="{{\App\Cartype::find(1)->image_url}}" class="card-img-top  img-fluid" alt="accent-gen1" >
+                                <img src="{{$commodity->image_url}}" class="card-img-top  img-fluid" alt="accent-gen1" >
                                 <div class="row">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{\App\Cartype::find(1)->name}}</h5>
-                                        <p class="card-text m-4 text-justify "dir="rtl"> {{\App\Cartype::find(1)->info}}</p>
-                                        <p class="card-text"><small class="text-muted">Last updated {{\App\Cartype::find(1)->updated_at}}</small></p>
+                                        <h5 class="card-title">{{$commodity->name}}</h5>
+                                        <p class="card-text m-4 text-justify "dir="rtl"> {{$commodity->info}}</p>
+                                        <p class="card-text"><small class="text-muted">Last updated {{$commodity->updated_at}}</small></p>
                                     </div>
 
                                     <div class="container">
