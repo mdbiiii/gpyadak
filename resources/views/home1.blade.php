@@ -20,7 +20,7 @@
                         </div>
                         <!-- Masthead Subheading-->
 
-                        <span class="pre-wrap masthead-subheading  font-weight-bold badge badge-pill badge-primary   mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا<img  src="/assets/img/export.png" alt="کالای تقلبی" style="width: 60px"></span>
+                        <span class="pre-wrap masthead-subheading  font-weight-bold badge badge-pill badge-primary   mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا<img  src="/assets/img/export2.png" alt="کالای تقلبی" style="width: 60px"></span>
                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                         <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0 " > ضمانت اصالت قطعات یدکی هیوندا و کیا <img  src="/assets/img/asl.png" alt="کالای تقلبی" style="width: 60px"></span>
                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -55,7 +55,7 @@
 
                         </div>
                         <div class="row mt-2">
-                            <p class="pre-wrap masthead-subheading  badge badge-pill badge-dark mb-0"  style="font-size: small">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید<img  src="/assets/img/call.png" alt="تماس" style="width: 60px"></p>
+                            <p class="pre-wrap masthead-subheading  badge badge-pill badge-light mb-0"  style="font-size: small">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید<img  src="/assets/img/call.png" alt="تماس" style="width: 60px"></p>
 
 
                         </div>
@@ -105,9 +105,8 @@
                                     </div>
                                 </div>
                             @endforeach
+
                         </div>
-
-
 
                     </div>
                 </section>
