@@ -81,20 +81,25 @@
                         </div>
                         <hr style="color: #1a252f">
                         <div class="row">
-                            @foreach($commodities as $commodity)
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1 ">
-
+                            @foreach($kia_commos as $kia_commo)
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1">
                                     <div class="thumbnail text-center">
                                         <span class="#"></span>
-                                        <a href="/commodity/{{$commodity->id}}" target="_blank">
-                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
+                                        <a href="/commodity/{{$kia_commo->id}}" target="_blank">
+                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$kia_commo->image_url}}" style="display: block; opacity: 0.99;" alt="">
                                         </a>
-                                        <a href="/commodity/{{$commodity->id}}" target="_blank">
-                                            <h5 class="onvan">{{$commodity->name}}</h5>
-                                        </a><a href="/commodity/{{$commodity->id}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
+                                        <div  style="width: 180px; height: 75px; display: block" >
+                                            <a href="/commodity/{{$kia_commo->id}}" target="_blank">
+
+                                                {{--                                                <p class="text-sm-center text-md-center text-lg-center text-xl-center  " >{{$commodity->name}}</p>--}}
+                                                <h5 class="mx-auto" >{{$kia_commo->name}}</h5>
+
+                                            </a>
+                                        </div>
+                                        <a href="/commodity/{{$kia_commo->id}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
                                         <a href="#contact" class="btn btn-success btn-sm rounded js-scroll-trigger active" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
                                             <i class="fa fa-phone"></i>تماس</a>
-                                        <a href="/commodity/{{$commodity->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
+                                        <a href="/commodity/{{$kia_commo->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
                                             <i class="fa fa-th-list"></i> اطلاعات</a>
                                         <hr>
                                     </div>
@@ -117,19 +122,25 @@
                         </div>
                         <hr style="color: #1a252f">
                         <div class="row">
-                            @foreach($commodities as $commodity)
+                            @foreach($hyu_commos as $hyu_commo)
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1">
                                     <div class="thumbnail text-center">
                                         <span class="#"></span>
-                                        <a href="/commodity/{{$commodity->id}}" target="_blank">
-                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;">
+                                        <a href="/commodity/{{$hyu_commo->id}}" target="_blank">
+                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$hyu_commo->image_url}}" style="display: block; opacity: 0.99;" alt="">
                                         </a>
-                                        <a href="/commodity/{{$commodity->id}}" target="_blank">
-                                            <h5 class="onvan">{{$commodity->name}}</h5>
-                                        </a><a href="/commodity/{{$commodity->id}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
+                                        <div  style="width: 180px; height: 75px; display: block" >
+                                            <a href="/commodity/{{$hyu_commo->id}}" target="_blank">
+
+{{--                                                <p class="text-sm-center text-md-center text-lg-center text-xl-center  " >{{$commodity->name}}</p>--}}
+                                                <h5 class="mx-auto" >{{$hyu_commo->name}}</h5>
+
+                                            </a>
+                                        </div>
+                                        <a href="/commodity/{{$hyu_commo->id}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
                                         <a href="#contact" class="btn btn-success btn-sm rounded js-scroll-trigger active" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
                                             <i class="fa fa-phone"></i>تماس</a>
-                                        <a href="/commodity/{{$commodity->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
+                                        <a href="/commodity/{{$hyu_commo->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
                                             <i class="fa fa-th-list"></i> اطلاعات</a>
                                         <hr>
                                     </div>

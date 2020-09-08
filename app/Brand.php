@@ -11,4 +11,10 @@ class Brand extends Model
     public function cars(){
         return $this->hasMany(Cartype::class);
     }
+
+
+    public function commodities()
+    {
+        return $this->hasManyThrough('App\Commodity', 'App\Cartype');
+    }
 }
