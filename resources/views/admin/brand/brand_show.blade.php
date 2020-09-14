@@ -29,6 +29,24 @@
                     <div class="col-md-auto">
                         <div class="card">
                             <div class="card-header">{{ __('بروزرسانی برند') }}</div>
+                            <div class="card-header">
+
+                                <div class="card-tools d-flex">
+                                    <form action="">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="search" class="form-control float-right" placeholder="جستجو" value="{{ request('search') }}">
+
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="btn-group-sm mr-1">
+                                        <a href="{{route('create_brand')}}" class="btn btn-info">ایجاد برند جدید</a>
+
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="card-body">
 
@@ -73,6 +91,7 @@
 
 
                             </div>
+                            <div class="card-footer">{{$brands->render()}}</div>
                         </div>
                     </div>
                 </div>

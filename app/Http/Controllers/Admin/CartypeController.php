@@ -74,9 +74,19 @@ class CartypeController extends Controller
      */
     public function show(Cartype $cartype)
     {
-        return view('admin.cartype.cartype_show',[
-            'cartypes'=> Cartype::all(),
-        ]);
+        $cartypes=Cartype::query();
+
+
+        if ($key=\request('search')){
+
+            $cartypes->where('name','LIKE',"%{$key}%")->orWhere('info','LIKE',"%{$key}%");
+        }
+
+        $cartypes=$cartypes->latest()->paginate(4);
+
+
+        return view('admin.cartype.cartype_show',compact('cartypes'));
+
     }
 
     /**

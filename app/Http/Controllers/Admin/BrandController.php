@@ -72,9 +72,19 @@ class BrandController extends Controller
      */
     public function show(Brand $brand)
     {
-        return view('admin.brand.brand_show',[
-            'brands'=> Brand::all(),
-        ]);
+        $brands=Brand::query();
+
+
+        if ($key=\request('search')){
+
+            $brands->where('name','LIKE',"%{$key}%")->orWhere('info','LIKE',"%{$key}%");
+        }
+
+        $brands=$brands->latest()->paginate(4);
+
+
+        return view('admin.brand.brand_show',compact('brands'));
+
     }
 
     /**
