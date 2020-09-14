@@ -80,9 +80,19 @@ class CommodityController extends Controller
      */
     public function show(Commodity $commodity)
     {
-        return view('admin.commodity.commodity_show',[
-            'commodities'=> Commodity::all(),
-        ]);
+
+        $commodities=Commodity::query();
+
+
+        if ($key=\request('search')){
+
+            $commodities->where('name','LIKE',"%{$key}%")->orWhere('info','LIKE',"%{$key}%");
+        }
+
+        $commodities=$commodities->latest()->paginate(4);
+
+
+        return view('admin.commodity.commodity_show',compact('commodities'));
     }
 
     /**

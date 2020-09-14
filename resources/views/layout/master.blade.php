@@ -21,16 +21,14 @@
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav" dir="rtl">
     <div class="container">
         <ul class="navbar-nav ml-auto">
+            @yield('login')
             <li class="nav-item mx-0 mx-lg-1">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">
                     <img src="/assets/img/PSD.png" style="width: 125px;margin:auto;" >GunnerPart
-{{--                    <img src="/assets/img/gun.png" style="width: 45px;margin: -10px -3px 0 0;">--}}
 
-{{--                    <img src="/assets/img/Hyundai.png">--}}
-{{--                    <img src="/assets/img/Kia.png">--}}
                 </a>
             </li>
-            @yield('login')
+
 
         </ul>
 
