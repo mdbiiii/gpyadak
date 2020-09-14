@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.master')
 
 @section('content')
 <div class="container">
@@ -25,4 +25,9 @@
         </div>
     </div>
 </div>
+@endsection
+@section('copyright')
+    <section class="copyright py-4 text-center text-white">
+        <div class="container"><small class="pre-wrap">Copyright © MDBI 2020</small></div>
+    </section>
 @endsection
