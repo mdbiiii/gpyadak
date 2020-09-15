@@ -36,11 +36,7 @@
                     <div class="container d-flex align-items-center flex-column">
                         <!-- Masthead Heading-->
                         <div class="row" >
-{{--                            <div class="" style="background: #17a2b8 !important">--}}
-{{--                                <div class=" card-img">--}}
-{{--                                    <img class="img-responsive" src="/assets/img/fake.png" alt="">--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+
                             <div class="" style="background: #17a2b8 !important">
                                 <div class=" card-img ">
                                     <img class="img-responsive" src="/assets/img/carpart.png" alt="قطعات یدکی">
@@ -55,7 +51,14 @@
 
                         </div>
                         <div class="row mt-2">
-                            <p class="pre-wrap masthead-subheading  badge badge-pill badge-light mb-0"  style="font-size: small">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید<img  src="/assets/img/call.png" alt="تماس" style="width: 60px"></p>
+
+
+
+
+
+                                <p class="pre-wrap masthead-subheading badge badge-pill badge-light mb-0" style="font-size: small" ><img  src="/assets/img/call.png" alt="تماس" style="width: 40px">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید</p>
+
+
 
 
                         </div>
