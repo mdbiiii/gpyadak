@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/heading.css">
     <link rel="stylesheet" href="/css/body.css">
     <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/theme.css">
 </head>
 
 
@@ -62,56 +63,109 @@
     <div class="container">
         <div class="row">
             <!-- Footer Location-->
-            <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="col-lg-4 mb-5 mb-lg-0"  dir="rtl">
 
                 <h3>آدرس ما
-                    <i class="fas fa-map-marker-alt"></i></h3>
+                    <i class="fas fa-map-marker-alt text-right"></i></h3>
+                <hr>
 
 
-                <p class="pre-wrap lead mb-0">2215 John Daniel Drive
-                    Clark, MO 65243</p>
-            </div>
-            <!-- Footer Social Icons-->
-            <div class="col-lg-4 mb-5 mb-lg-0">
-                <h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>
+                <p class="pre-wrap lead mb-1">تهران،ایستگاه مترو بهارستان،میدان بهارستان</p>
+
+
+                <a class="btn btn-success footer-map mb-1" href="https://www.google.com/maps/dir//%DB%8C%D8%AF%DA%A9+%D8%B4%D8%A7%D9%BE%E2%80%AD/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3f8e018bbfe91c51:0xdebb7e8b7ea28e4?sa=X&amp;ved=2ahUKEwjJqfjA1LroAhVOZ8AKHUjNBQEQ9RcwDnoECAsQDg" title="آدرس گانر‍‍پارت در نقشه گوگل" target="_blank">
+                    <img alt="Google Map" title="آدرس گانرپارت در نقشه گوگل"  src="/assets/img/Google-Maps.png">
+                    مسیریابی گوگل
+
+                    <i class="fas fa-arrow-circle-left"></i>
+                </a>
+
+                <a class="btn btn-info footer-map" href="https://www.waze.com/livemap/directions?to=ll.35.7655429%2C51.3462744&from=place.ChIJJ6Sz3ioBjj8RG8yOfbZcmOA" title="آدرس گانر‍‍پارت در نقشه waze" target="_blank">
+                    <img alt="Google Map" title="آدرس گانرپارت در نقشه waze"  src="/assets/img/waze.png">
+                    مسیریابی ویز
+
+                    <i class="fas fa-arrow-circle-left"></i>
+                </a>
             </div>
             <!-- Footer About Text-->
             <div class="col-lg-4" dir="rtl" >
-                <h4 class="mb-4" dir="rtl">ABOUT FREELANCER</h4>
-                <table class="table table-borderless bg-primary contact-table text-white">
+                <!-- Footer contact us-->
+                <h4 class="mb-4" dir="rtl">تماس با ما <i class="fa fa-phone "></i>
+                </h4>
+                <hr>
+                <table class="table table-borderless  contact-table text-white" style="background: #245064;color: #e2e3e5">
 
                     <tbody>
                     <tr>
                         <th scope="row">دفتر فروش</th>
                         <td > <br>
-                            {{english2persian("885698456-021")}} <br>
-                            {{english2persian("885698456-021")}} <br>
-                            {{english2persian("885698456-021")}}<br>
-                            {{english2persian("885698456-021")}}
+                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a><br>
+                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a><br>
+                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a><br>
+                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a><br>
+                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a>
+                            <hr>
                         </td>
 
                     </tr>
                     <tr>
                         <th scope="row">موبایل</th>
-                        <td>{{english2persian("09126452317")}} <br>
-                            {{english2persian("09126452317")}}
+                        <td>
+                            <a href="tel:02136348512">{{english2persian("09126452317")}}</a><br>
+                            <a href="tel:02136348512">{{english2persian("09126452317")}}</a>
+                            <hr>
                         </td>
 
                     </tr>
                     <tr>
                         <th scope="row">تلگرام</th>
-                        <td>Jacob</td>
+                        <td><a class="contact-telegram" title="لینک تلگرام" href="https://telegram.me/Gunnerparts_support">
+
+                                <img alt="telegram" title="تلگرام" src="assets/img/Telegram-logo.png">Gunnerparts_support</a>
+                            <hr></td>
 
                     </tr>
                     <tr>
                         <th scope="row">واتساپ</th>
-                        <td>Larry</td>
+                        <td><a class="contact-telegram" title="لینک واتساپ" href="https://wa.me/989126758978">
+                                <img alt="whatsapp" title="واتساپ" src="assets/img/Whatsapp-logo.png">{{english2persian("09126452317")}}</a>
+                            <hr></td>
 
                     </tr>
                     </tbody>
 
                 </table>
             </div>
+            <!-- Footer Social Icons-->
+            <div class="col-lg-4 mb-5 mb-lg-0 " dir="rtl">
+
+
+
+
+
+                    <h4 class="mb-4">پشتیبانی <i class="fas fa-headphones"></i></h4>
+                <hr>
+
+
+                    <ul style="text-align: right ; color: #fffacc">
+                        <li><a title="شرایط پرداخت برای سفارش ها" href="https://yadak.shop/payment/">شرایط پرداخت</a></li>
+                        <br>
+                        <li><a title="شرایط ارسال کالا به سراسر ایران" href="https://yadak.shop/shipment/">شرایط ارسال</a></li>
+                        <br>
+                        <li><a title="لطفا انتقادات و پیشنهادات خود را با ما در میان بزارید" href="#">انتقادات و پیشنهادات</a></li>
+                        <br>
+                        <li><a title="پاسخ به پرسش های متداول" href="https://yadak.shop/faq/">سوالات متداول</a></li>
+                        <br>
+                        <li><a title="سفارش خود را از اینجا پیگیری کنید" href="#">پیگیری سفارش</a></li>
+
+                    </ul>
+
+
+
+
+{{--                <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>--}}
+            </div>
+
         </div>
     </div>
 </footer>
