@@ -84,6 +84,7 @@
                         </div>
                         <hr style="color: #1a252f">
                         <div class="row">
+
                             @foreach($kia_commos as $kia_commo)
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1">
                                     <div class="thumbnail text-center">
