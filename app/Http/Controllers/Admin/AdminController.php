@@ -11,8 +11,8 @@ class AdminController extends Controller
 
     public function index(){
 
-//        $commodities=Commodity::all();
-//        $commodities=$commodities->chunk(3)->last();
+        $commodities=Commodity::all();
+        $commodities=$commodities->chunk(3)->last();
         return view('admin.dashboard',compact('commodities'));
     }
 }
