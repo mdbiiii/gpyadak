@@ -72,8 +72,8 @@
                                             <td><img  class=" img-fluid img-thumbnail " src="{{\Illuminate\Support\Facades\URL::asset($brand->logo_url)}}">
                                                 </td>
                                         <td>
-                                            <a href="/admin/brand/{{$brand->id}}/edit" class="btn btn-info">ویرایش</a>
-                                            <form action="/admin/brand/{{$brand->id}}/delete" method="POST">
+                                            <a href="{{asset("/admin/brand/{$brand->id}/edit")}}" class="btn btn-info">ویرایش</a>
+                                            <form action="{{asset("/admin/brand/{$brand->id}/delete")}}" method="POST">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="btn btn-danger">حذف</button>

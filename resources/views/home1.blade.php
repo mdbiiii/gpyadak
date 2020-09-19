@@ -20,13 +20,13 @@
                         </div>
                         <!-- Masthead Subheading-->
 
-                        <span class="pre-wrap masthead-subheading  font-weight-bold badge badge-pill badge-primary   mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا<img  src="/assets/img/export2.png" alt="کالای تقلبی" style="width: 60px"></span>
+                        <span class="pre-wrap masthead-subheading  font-weight-bold badge badge-pill badge-primary   mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا<img  src="{{asset("/assets/img/export2.png")}}" alt="کالای تقلبی" style="width: 60px"></span>
                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0 " > ضمانت اصالت قطعات یدکی هیوندا و کیا <img  src="/assets/img/asl.png" alt="کالای تقلبی" style="width: 60px"></span>
+                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0 " > ضمانت اصالت قطعات یدکی هیوندا و کیا <img  src="{{asset("/assets/img/asl.png")}}" alt="کالای تقلبی" style="width: 60px"></span>
                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > تحویل اکسپرس سریع کالا در سراسر کشور <img  src="/assets/img/delivery.png" alt="کالای تقلبی" style="width: 60px"></span>
+                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > تحویل اکسپرس سریع کالا در سراسر کشور <img  src="{{asset("/assets/img/delivery.png")}}" alt="کالای تقلبی" style="width: 60px"></span>
                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > مشاوره رایگان از استعلام تا تحویل کالا <img  src="/assets/img/moshavere.png" alt="کالای تقلبی" style="width: 50px"></span>
+                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > مشاوره رایگان از استعلام تا تحویل کالا <img  src="{{asset("/assets/img/moshavere.png")}}" alt="کالای تقلبی" style="width: 50px"></span>
 
                     </div>
 
@@ -39,14 +39,14 @@
 
                             <div class="" style="background: #17a2b8 !important">
                                 <div class=" card-img ">
-                                    <img class="img-responsive" src="/assets/img/carpart.png" alt="قطعات یدکی">
+                                    <img class="img-responsive" src="{{asset("/assets/img/carpart.png")}}" alt="قطعات یدکی">
                                 </div>
                             </div>
 
                         </div>
                         <br>
                         <div class="row">
-                            <p class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-dark mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهید<img  src="/assets/img/fake.png" alt="کالای تقلبی" style="width: 60px"></p>
+                            <p class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-dark mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهید<img  src="{{asset("/assets/img/fake.png")}}" alt="کالای تقلبی" style="width: 60px"></p>
                             <br>
 
                         </div>
@@ -56,7 +56,7 @@
 
 
 
-                                <p class="pre-wrap masthead-subheading badge badge-pill badge-light mb-0" style="font-size: small" ><img  src="/assets/img/call.png" alt="تماس" style="width: 40px">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید</p>
+                                <p class="pre-wrap masthead-subheading badge badge-pill badge-light mb-0" style="font-size: small" ><img  src="{{asset("/assets/img/call.png")}}" alt="تماس" style="width: 40px">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید</p>
 
 
 
@@ -79,7 +79,7 @@
                 <section class="page-section" id="kia">
                     <div class="container">
                         <div class="text-right">
-                            <h4 class=" text-secondary mb-0 d-inline-block"><img src="/assets/img/Kia.png">قطعات یدکی کیا</h4>
+                            <h4 class=" text-secondary mb-0 d-inline-block"><img src="{{asset("/assets/img/Kia.png")}}">قطعات یدکی کیا</h4>
 
                         </div>
                         <hr style="color: #1a252f">
@@ -89,21 +89,21 @@
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1">
                                     <div class="thumbnail text-center">
                                         <span class="#"></span>
-                                        <a href="/commodity/{{$kia_commo->id}}" target="_blank">
-                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$kia_commo->image_url}}" style="display: block; opacity: 0.99;" alt="">
+                                        <a href="{{asset("/commodity/{$kia_commo->id}")}}" target="_blank">
+                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{asset("$kia_commo->image_url")}}" style="display: block; opacity: 0.99;" alt="">
                                         </a>
                                         <div  style="width: 180px; height: 75px; display: block" >
-                                            <a href="/commodity/{{$kia_commo->id}}" target="_blank">
+                                            <a href="{{asset("/commodity/{$kia_commo->id}")}}" target="_blank">
 
                                                 {{--                                                <p class="text-sm-center text-md-center text-lg-center text-xl-center  " >{{$commodity->name}}</p>--}}
                                                 <h5 class="mx-auto" >{{$kia_commo->name}}</h5>
 
                                             </a>
                                         </div>
-                                        <a href="/commodity/{{$kia_commo->id}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
+                                        <a href="{{asset("/commodity/{$kia_commo->id}")}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
                                         <a href="#contact" class="btn btn-success btn-sm rounded js-scroll-trigger active" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
                                             <i class="fa fa-phone"></i>تماس</a>
-                                        <a href="/commodity/{{$kia_commo->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
+                                        <a href="{{asset("/commodity/{$kia_commo->id}")}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
                                             <i class="fa fa-th-list"></i> اطلاعات</a>
                                         <hr>
                                     </div>
@@ -120,7 +120,7 @@
                 <section class="page-section" id="hiyonda">
                     <div class="container">
                         <div class="text-right">
-                            <h4 class=" text-secondary mb-0 d-inline-block"><img src="/assets/img/Hyundai.png">قطعات یدکی هیوندا</h4>
+                            <h4 class=" text-secondary mb-0 d-inline-block"><img src="{{asset("/assets/img/Hyundai.png")}}">قطعات یدکی هیوندا</h4>
 
                         </div>
                         <hr style="color: #1a252f">
@@ -129,21 +129,21 @@
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1">
                                     <div class="thumbnail text-center">
                                         <span class="#"></span>
-                                        <a href="/commodity/{{$hyu_commo->id}}" target="_blank">
-                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$hyu_commo->image_url}}" style="display: block; opacity: 0.99;" alt="">
+                                        <a href="{{asset("/commodity/{$hyu_commo->id}")}}" target="_blank">
+                                            <img class="img-responsive img-fluid imglazyload card-img-top" src="{{asset("$hyu_commo->image_url")}}" style="display: block; opacity: 0.99;" alt="">
                                         </a>
                                         <div  style="width: 180px; height: 75px; display: block" >
-                                            <a href="/commodity/{{$hyu_commo->id}}" target="_blank">
+                                            <a href="{{asset("/commodity/{$hyu_commo->id}")}}" target="_blank">
 
 {{--                                                <p class="text-sm-center text-md-center text-lg-center text-xl-center  " >{{$commodity->name}}</p>--}}
                                                 <h5 class="mx-auto" >{{$hyu_commo->name}}</h5>
 
                                             </a>
                                         </div>
-                                        <a href="/commodity/{{$hyu_commo->id}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
+                                        <a href="{{asset("/commodity/{$hyu_commo->id}")}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
                                         <a href="#contact" class="btn btn-success btn-sm rounded js-scroll-trigger active" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
                                             <i class="fa fa-phone"></i>تماس</a>
-                                        <a href="/commodity/{{$hyu_commo->id}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
+                                        <a href="{{asset("/commodity/{$hyu_commo->id}")}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
                                             <i class="fa fa-th-list"></i> اطلاعات</a>
                                         <hr>
                                     </div>
@@ -192,9 +192,9 @@
                                         </div>
                                     </div>
 
-                                    <img    class="img-responsive  img-fluid  card-img-top" src="{{$commodity->image_url}}" alt="{{$commodity->name}}"/>
+                                    <img    class="img-responsive  img-fluid  card-img-top" src="{{asset("$commodity->image_url")}}" alt="{{$commodity->name}}"/>
                                     <div class="card-body text-center">
-                                        <a href="admin/commodity/{{$commodity->id}}">
+                                        <a href="{{asset("/commodity/{$commodity->id}")}}">
                                             <h6  class="card-title">{{$commodity->name}}</h6>
                                             <hr>
                                             <h6 style="color: #0f6674"> جهت مشاهده اطلاعات بیشتر کلیک کنید</h6>
@@ -224,7 +224,7 @@
                                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                                         <div class="divider-custom-line"></div>
                                                     </div>
-                                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{{$commodity->image_url}}" alt="{{$commodity->name}}"/>
+                                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{{asset("$commodity->image_url")}}" alt="{{$commodity->name}}"/>
                                                     <!-- Portfolio Modal - Text-->
                                                     <p class="mb-5">{{$commodity->info}}</p>
                                                     <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
@@ -298,7 +298,7 @@
                     <div class="col-lg-2">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-                            <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="mailto:name@example.com"><hr>{{english2persian("09126452317")}}</a>
+                            <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="https://wa.me/98912676163"><hr>{{english2persian("09126452317")}}</a>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -306,22 +306,22 @@
                             <div class="icon-contact mb-2"><i class="fab fa-instagram"></i></div>
                             <div class="text-muted">اینستاگرام</div>
                             <div class="lead font-weight-bold">
-                                <link rel="stylesheet" href="https://www.instagram.com/mdbi"><hr>
-                                {{--                            <a class="lead font-weight-bold" href="https://www.instagram.com/mdbi">--}}
-                                @gunnerparts</div>
+                                <link rel="stylesheet" href="https://www.instagram.com/gunnerparts"><hr>
+                                <a class="lead font-weight-bold" href="https://www.instagram.com/gunnerparts">@gunnerparts</a>
+                                </div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fa fa-mobile-alt"></i></div>
                             <div class="text-muted">شماره همراه</div>
-                            <a class="lead font-weight-bold" href="#"><hr>{{english2persian("09126452317")}}</a>
+                            <a class="lead font-weight-bold" href="tel:09126761663"><hr>{{english2persian("09126452317")}}</a>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fas fa-phone"></i></div>
-                            <div class="text-muted">دفتر فروش</div><a class="lead font-weight-normal" href="#">
+                            <div class="text-muted">دفتر فروش</div><a class="lead font-weight-normal" href="tel:09126761663">
                                 <hr>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}</a>
                         </div>
                     </div>

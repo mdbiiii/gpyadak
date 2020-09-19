@@ -13,12 +13,12 @@
 
 
     <!-- DEMO CHARTS -->
-    <link rel="stylesheet" href="dashboard/demo/chartist.css">
-    <link rel="stylesheet" href="dashboard/demo/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="{{asset("dashboard/demo/chartist.css")}}">
+    <link rel="stylesheet" href="{{asset("dashboard/demo/chartist-plugin-tooltip.css")}}">
 
     <!-- Template -->
-    <link rel="stylesheet" href="dashboard/graindashboard/css/graindashboard.css">
-    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="{{asset("dashboard/graindashboard/css/graindashboard.css")}}">
+    <link rel="stylesheet" href="{{asset("/css/font.css")}}">
 
 
 </head>
@@ -29,16 +29,16 @@
     <nav class="navbar flex-nowrap p-0">
         <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
             <!-- Logo For Mobile View -->
-            <a class="navbar-brand navbar-brand-mobile" href="/">
-                <img class=" img-fluid w-100" src="/assets/img/PSD.png" alt="Graindashboard" >
+            <a class="navbar-brand navbar-brand-mobile" href="{{asset("/admin")}}">
+                <img class=" img-fluid w-100" src="{{asset("/assets/img/PSD.png")}}" alt="Graindashboard" >
 
             </a>
             <!-- End Logo For Mobile View -->
 
             <!-- Logo For Desktop View -->
-            <a class="navbar-brand navbar-brand-desktop" href="/">
-                <img class="side-nav-show-on-closed" src="/assets/img/PSD.png" alt="Graindashboard" style="width: 70px; height: auto;">
-                <img class="side-nav-hide-on-closed" src="/assets/img/PSD.png" alt="Graindashboard" style="width:100px; height: auto;">
+            <a class="navbar-brand navbar-brand-desktop" href="{{asset("/admin")}}">
+                <img class="side-nav-show-on-closed" src="{{asset("/assets/img/PSD.png")}}" alt="Graindashboard" style="width: 70px; height: auto;">
+                <img class="side-nav-hide-on-closed" src="{{asset("/assets/img/PSD.png")}}" alt="Graindashboard" style="width:100px; height: auto;">
             </a>
             <!-- End Logo For Desktop View -->
         </div>
@@ -111,7 +111,7 @@
 
             <!-- Dashboard -->
             <li class="side-nav-menu-item active">
-                <a class="side-nav-menu-link media align-items-center" href="/">
+                <a class="side-nav-menu-link media align-items-center" href="{{asset("/admin")}}">
               <span class="side-nav-menu-icon d-flex mr-3">
                 <i class="gd-dashboard"></i>
               </span>
@@ -361,16 +361,16 @@
 </main>
 
 
-<script src="dashboard/graindashboard/js/graindashboard.js"></script>
-<script src="dashboard/graindashboard/js/graindashboard.vendor.js"></script>
+<script src="{{asset("dashboard/graindashboard/js/graindashboard.js")}}"></script>
+<script src="{{asset("dashboard/graindashboard/js/graindashboard.vendor.js")}}"></script>
 
 <!-- DEMO CHARTS -->
-<script src="dashboard/demo/resizeSensor.js"></script>
-<script src="dashboard/demo/chartist.js"></script>
-<script src="dashboard/demo/chartist-plugin-tooltip.js"></script>
-<script src="dashboard/demo/gd.chartist-area.js"></script>
-<script src="dashboard/demo/gd.chartist-bar.js"></script>
-<script src="dashboard/demo/gd.chartist-donut.js"></script>
+<script src="{{asset("dashboard/demo/resizeSensor.js")}}"></script>
+<script src="{{asset("dashboard/demo/chartist.js")}}"></script>
+<script src="{{asset("dashboard/demo/chartist-plugin-tooltip.js")}}"></script>
+<script src="{{asset("dashboard/demo/gd.chartist-area.js")}}"></script>
+<script src="{{asset("dashboard/demo/gd.chartist-bar.js")}}"></script>
+<script src="{{asset("dashboard/demo/gd.chartist-donut.js")}}"></script>
 <script>
     $.GDCore.components.GDChartistArea.init('.js-area-chart');
     $.GDCore.components.GDChartistBar.init('.js-bar-chart');

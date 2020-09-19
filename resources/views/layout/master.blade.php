@@ -9,12 +9,14 @@
     <!-- Font Awesome icons (free version)-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="/css/styles.css" rel="stylesheet">
+    <link href="{{asset("/css/styles.css")}}" rel="stylesheet">
+
     <!-- Fonts CSS-->
-    <link rel="stylesheet" href="/css/heading.css">
-    <link rel="stylesheet" href="/css/body.css">
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/css/theme.css">
+    <link href="{{asset("/css/heading.css")}}" rel="stylesheet">
+    <link href="{{asset("/css/body.css")}}" rel="stylesheet">
+    <link href="{{asset("/css/font.css")}}" rel="stylesheet">
+    <link href="{{asset("/css/theme.css")}}" rel="stylesheet">
+
 </head>
 
 
@@ -25,7 +27,7 @@
             @yield('login')
             <li class="nav-item mx-0 mx-lg-1">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                    <img src="/assets/img/PSD.png" style="width: 125px;margin:auto;" >GunnerPart
+                    <img src="{{asset("/assets/img/PSD.png")}}" style="width: 125px;margin:auto;" >GunnerPart
 
                 </a>
             </li>
@@ -33,15 +35,16 @@
 
         </ul>
 
-        <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-secondary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+        <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-secondary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#kia"><img src="/assets/img/Hyundai.png" style="width: 28px;margin: -10px -3px 0 0;">هیوندا </a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#kia"><img src="{{asset("/assets/img/Hyundai.png")}}" style="width: 28px;margin: -10px -3px 0 0;">هیوندا </a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#kia"><img src="/assets/img/kia.png" style="width: 28px;margin: -10px -3px 0 0;">کیا </a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#kia"><img
+                            src="{{asset("/assets/img/Kia.png")}}" style="width: 28px;margin: -10px -3px 0 0;">کیا </a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">قطعات یدکی</a>
@@ -74,14 +77,14 @@
 
 
                 <a class="btn btn-success footer-map mb-1" href="https://www.google.com/maps/dir//%DB%8C%D8%AF%DA%A9+%D8%B4%D8%A7%D9%BE%E2%80%AD/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3f8e018bbfe91c51:0xdebb7e8b7ea28e4?sa=X&amp;ved=2ahUKEwjJqfjA1LroAhVOZ8AKHUjNBQEQ9RcwDnoECAsQDg" title="آدرس گانر‍‍پارت در نقشه گوگل" target="_blank">
-                    <img alt="Google Map" title="آدرس گانرپارت در نقشه گوگل"  src="/assets/img/Google-Maps.png">
+                    <img alt="Google Map" title="آدرس گانرپارت در نقشه گوگل"  src="{{asset("/assets/img/Google-Maps.png")}}">
                     مسیریابی گوگل
 
                     <i class="fas fa-arrow-circle-left"></i>
                 </a>
 
                 <a class="btn btn-info footer-map" href="https://www.waze.com/livemap/directions?to=ll.35.7655429%2C51.3462744&from=place.ChIJJ6Sz3ioBjj8RG8yOfbZcmOA" title="آدرس گانر‍‍پارت در نقشه waze" target="_blank">
-                    <img alt="Google Map" title="آدرس گانرپارت در نقشه waze"  src="/assets/img/waze.png">
+                    <img alt="Google Map" title="آدرس گانرپارت در نقشه waze"  src="{{asset("/assets/img/waze.png")}}">
                     مسیریابی ویز
 
                     <i class="fas fa-arrow-circle-left"></i>
@@ -121,14 +124,14 @@
                         <th scope="row">تلگرام</th>
                         <td><a class="contact-telegram" title="لینک تلگرام" href="https://telegram.me/Gunnerparts_support">
 
-                                <img alt="telegram" title="تلگرام" src="assets/img/Telegram-logo.png">Gunnerparts_support</a>
+                                <img alt="telegram" title="تلگرام" src="{{asset("assets/img/Telegram-logo.png")}}">Gunnerparts_support</a>
                             <hr></td>
 
                     </tr>
                     <tr>
                         <th scope="row">واتساپ</th>
-                        <td><a class="contact-telegram" title="لینک واتساپ" href="https://wa.me/989126758978">
-                                <img alt="whatsapp" title="واتساپ" src="assets/img/Whatsapp-logo.png">{{english2persian("09126452317")}}</a>
+                        <td><a class="contact-telegram" title="لینک واتساپ" href="https://wa.me/989126761663">
+                                <img alt="whatsapp" title="واتساپ" src="{{asset("assets/img/Whatsapp-logo.png")}}">{{english2persian("09126761663")}}</a>
                             <hr></td>
 
                     </tr>
@@ -143,27 +146,27 @@
 
 
 
-                    <h4 class="mb-4">پشتیبانی <i class="fas fa-headphones"></i></h4>
+                <h4 class="mb-4">پشتیبانی <i class="fas fa-headphones"></i></h4>
                 <hr>
 
 
-                    <ul style="text-align: right ; color: #fffacc">
-                        <li><a title="شرایط پرداخت برای سفارش ها" href="https://yadak.shop/payment/">شرایط پرداخت</a></li>
-                        <br>
-                        <li><a title="شرایط ارسال کالا به سراسر ایران" href="https://yadak.shop/shipment/">شرایط ارسال</a></li>
-                        <br>
-                        <li><a title="لطفا انتقادات و پیشنهادات خود را با ما در میان بزارید" href="#">انتقادات و پیشنهادات</a></li>
-                        <br>
-                        <li><a title="پاسخ به پرسش های متداول" href="https://yadak.shop/faq/">سوالات متداول</a></li>
-                        <br>
-                        <li><a title="سفارش خود را از اینجا پیگیری کنید" href="#">پیگیری سفارش</a></li>
+                <ul style="text-align: right ; color: #fffacc">
+                    <li><a title="شرایط پرداخت برای سفارش ها" href="#">شرایط پرداخت</a></li>
+                    <br>
+                    <li><a title="شرایط ارسال کالا به سراسر ایران" href="https:#">شرایط ارسال</a></li>
+                    <br>
+                    <li><a title="لطفا انتقادات و پیشنهادات خود را با ما در میان بزارید" href="#">انتقادات و پیشنهادات</a></li>
+                    <br>
+                    <li><a title="پاسخ به پرسش های متداول" href="#">سوالات متداول</a></li>
+                    <br>
+                    <li><a title="سفارش خود را از اینجا پیگیری کنید" href="#">پیگیری سفارش</a></li>
 
-                    </ul>
-
-
+                </ul>
 
 
-{{--                <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>--}}
+
+
+                {{--                <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>--}}
             </div>
 
         </div>
@@ -179,9 +182,9 @@
 <!-- Third party plugin JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <!-- Contact form JS-->
-<script src="/assets/mail/jqBootstrapValidation.js"></script>
-<script src="/assets/mail/contact_me.js"></script>
+<script src="{{asset("/assets/mail/jqBootstrapValidation.js")}}"></script>
+<script src="{{asset("/assets/mail/contact_me.js")}}"></script>
 <!-- Core theme JS-->
-<script src="/js/scripts.js"></script>
+<script src="{{asset("/js/scripts.js")}}"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
                     <div class="row ">
                         <div class="container">
                             <div class="card mb-3 m-5">
-                                <img src="{{$commodity->image_url}}" class="card-img-top  img-fluid" alt="accent-gen1" >
+                                <img src="{{asset("$commodity->image_url")}}" class="card-img-top  img-fluid" alt="accent-gen1" >
                                 <div class="row">
                                     <div class="card-body">
                                         <h5 class="card-title">{{$commodity->name}}</h5>
@@ -27,6 +27,8 @@
                                         <br>
 
                                         <!-- Contact Section Content-->
+                                        <!-- Contact Section Content-->
+
                                         <div class="row justify-content-center m-auto ml-3">
                                             <div class="col-lg-2">
                                                 <div class="d-flex flex-column align-items-center">
@@ -41,7 +43,7 @@
                                             <div class="col-lg-2">
                                                 <div class="d-flex flex-column align-items-center">
                                                     <div class="icon-contact mb-2"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-                                                    <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="mailto:name@example.com"><hr>{{english2persian("09126452317")}}</a>
+                                                    <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="https://wa.me/98912676163"><hr>{{english2persian("09126452317")}}</a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2">
@@ -49,22 +51,22 @@
                                                     <div class="icon-contact mb-2"><i class="fab fa-instagram"></i></div>
                                                     <div class="text-muted">اینستاگرام</div>
                                                     <div class="lead font-weight-bold">
-                                                        <link rel="stylesheet" href="https://www.instagram.com/mdbi"><hr>
-                                                        {{--                            <a class="lead font-weight-bold" href="https://www.instagram.com/mdbi">--}}
-                                                        @gunnerparts</div>
+                                                        <link rel="stylesheet" href="https://www.instagram.com/gunnerparts"><hr>
+                                                        <a class="lead font-weight-bold" href="https://www.instagram.com/gunnerparts">@gunnerparts</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2">
                                                 <div class="d-flex flex-column align-items-center">
                                                     <div class="icon-contact mb-2"><i class="fa fa-mobile-alt"></i></div>
                                                     <div class="text-muted">شماره همراه</div>
-                                                    <a class="lead font-weight-bold" href="#"><hr>{{english2persian("09126452317")}}</a>
+                                                    <a class="lead font-weight-bold" href="tel:09126761663"><hr>{{english2persian("09126452317")}}</a>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-lg-3">
                                                 <div class="d-flex flex-column align-items-center">
                                                     <div class="icon-contact mb-2"><i class="fas fa-phone"></i></div>
-                                                    <div class="text-muted">دفتر فروش</div><a class="lead font-weight-normal" href="#">
+                                                    <div class="text-muted">دفتر فروش</div><a class="lead font-weight-normal" href="tel:09126761663">
                                                         <hr>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}</a>
                                                 </div>
                                             </div>

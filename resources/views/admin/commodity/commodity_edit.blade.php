@@ -31,7 +31,7 @@
                             <div class="card-header">{{ __('بروزرسانی محصولات') }}</div>
 
                             <div class="card-body">
-                                <form method="POST" action="/admin/commodity/{{$commodity->id}}/edit" enctype="multipart/form-data">
+                                <form method="POST" action="{{asset("/admin/commodity/{$commodity->id}/edit")}}" enctype="multipart/form-data">
                                     @csrf
                                     @method('put')
 

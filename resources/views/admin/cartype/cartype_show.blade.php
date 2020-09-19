@@ -72,8 +72,8 @@
                                             <td><img  class=" img-fluid img-thumbnail " src="{{\Illuminate\Support\Facades\URL::asset($cartype->image_url)}}">
                                                 </td>
                                         <td>
-                                            <a href="/admin/cartype/{{$cartype->id}}/edit" class="btn btn-info">ویرایش</a>
-                                            <form action="/admin/cartype/{{$cartype->id}}/delete" method="POST">
+                                            <a href="{{asset("/admin/cartype/{$cartype->id}/edit")}}" class="btn btn-info">ویرایش</a>
+                                            <form action="{{asset("/admin/cartype/{$cartype->id}/delete")}}" method="POST">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="btn btn-danger">حذف</button>

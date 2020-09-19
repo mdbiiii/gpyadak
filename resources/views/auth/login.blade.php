@@ -69,14 +69,14 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group row mb-0">
-                                        <div class="col-md-6 offset-md-4 mt-2" >
+{{--                                    <div class="form-group row mb-0">--}}
+{{--                                        <div class="col-md-6 offset-md-4 mt-2" >--}}
 
-                                            <a class="btn btn-danger" href="{{ route('google-auth') }}">
-                                                {{ __('ورود با اکانت گوگل') }}
-                                            </a>
-                                        </div>
-                                    </div>
+{{--                                            <a class="btn btn-danger" href="{{ route('google-auth') }}">--}}
+{{--                                                {{ __('ورود با اکانت گوگل') }}--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                 </form>
                             </div>
                         </div>
