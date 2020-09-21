@@ -271,7 +271,7 @@
         <!-- about-->
 
         <!-- contact-->
-        <section class="page-section" id="contact">
+        <section class="page-section " id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
                 <div class="text-center">
