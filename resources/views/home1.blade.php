@@ -56,7 +56,7 @@
 
 
 
-                                <p class="pre-wrap masthead-subheading badge badge-pill badge-light mb-0" style="font-size: small" ><img  src="{{asset("/assets/img/call.png")}}" alt="تماس" style="width: 40px">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید</p>
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"><p class="pre-wrap masthead-subheading badge badge-pill badge-light mb-0" style="font-size: small" ><img  src="{{asset("/assets/img/call.png")}}" alt="تماس" style="width: 40px">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید</p></a>
 
 
 
@@ -227,7 +227,7 @@
                                                     <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="{{asset("$commodity->image_url")}}" alt="{{$commodity->name}}"/>
                                                     <!-- Portfolio Modal - Text-->
                                                     <p class="mb-5">{{$commodity->info}}</p>
-                                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>بستن</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -259,11 +259,11 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ml-auto">
-                        <p class="pre-wrap lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source images including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+                    <div class="col-lg-4 ml-auto" dir="rtl">
+                        <p class="pre-wrap lead text-justify" >مجموعه گانر پارت سالهاست در زمینه واردات مستقیم و غیرمستقیم لوازم یدکی برندهای هیوندا و کیا فعالیت می کند. جهت رفاه حال مشتریان عزیز، این مجموعه وظیفه خود می داند تا با گسترش فعالیت های خود در بستر وب دسترسی راحت هم میهنان گرامی از سراسر کشور به قطعات یدکی را فراهم نماید  .</p>
                     </div>
-                    <div class="col-lg-4 mr-auto">
-                        <p class="pre-wrap lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
+                    <div class="col-lg-4 mr-auto text-justify" dir="rtl">
+                        <p class="pre-wrap lead" >برای مجموعه گانر پارت اعتماد شما بزرگترین سرمایه مادی و معنوی می باشد. لذا در این راستا بر آن هستیم تا با تامین قطعات یدکی با بهترین کیفیت و نازلترین قیمت پاسخ اعتماد مشتریان عزیز را بدهیم. این مجموعه از لحظه سفارش تا تحویل و نصب قطعات همراه شماست.</p>
                     </div>
                 </div>
             </div>
@@ -291,14 +291,16 @@
                                 <i class="fab fa-telegram" aria-hidden="true"></i>
                             </div>
                             <div class="text-muted">تلگرام</div>
-                            <div class="lead font-weight-bold"><hr>@gunnerparts_support<br>
-                                {{english2persian("09126452317")}}</div>
+                            <div class="lead font-weight-bold"><hr><a class="contact-telegram" title="لینک تلگرام" href="https://telegram.me/Gunnerparts_support">
+
+                                  Gunnerparts_support</a><br>
+                                <a href="tel:09126761663">{{english2persian("09126761663")}}</a></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-                            <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="https://wa.me/98912676163"><hr>{{english2persian("09126452317")}}</a>
+                            <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="https://wa.me/989126761663"><hr>{{english2persian("09126452317")}}</a>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -315,14 +317,15 @@
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fa fa-mobile-alt"></i></div>
                             <div class="text-muted">شماره همراه</div>
-                            <a class="lead font-weight-bold" href="tel:09126761663"><hr>{{english2persian("09126452317")}}</a>
+                            <a class="lead font-weight-bold" href="tel:09126761663"><hr>{{english2persian("09126761663")}}</a>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fas fa-phone"></i></div>
-                            <div class="text-muted">دفتر فروش</div><a class="lead font-weight-normal" href="tel:09126761663">
-                                <hr>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}</a>
+                            <div class="text-muted">دفتر فروش</div>
+                            <a class="lead font-weight-bold" href="tel:02133966541"><hr>{{english2persian("33966541-021")}}</a><br>
+                            <a class="lead font-weight-bold" href="tel:02136059430">{{english2persian("36059430-021")}}</a><br>
                         </div>
                     </div>
                 </div>

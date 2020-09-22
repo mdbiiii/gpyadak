@@ -102,11 +102,9 @@
                     <tr>
                         <th scope="row">دفتر فروش</th>
                         <td > <br>
-                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a><br>
-                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a><br>
-                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a><br>
-                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a><br>
-                            <a href="tel:02136348512">{{english2persian("885698456-021")}}</a>
+                            <a href="tel:02133966541">{{english2persian("33966541-021")}}</a><br>
+                            <a href="tel:02136059430">{{english2persian("36059430-021")}}</a><br>
+
                             <hr>
                         </td>
 
@@ -114,8 +112,8 @@
                     <tr>
                         <th scope="row">موبایل</th>
                         <td>
-                            <a href="tel:02136348512">{{english2persian("09126452317")}}</a><br>
-                            <a href="tel:02136348512">{{english2persian("09126452317")}}</a>
+                            <a href="tel:09126761663">{{english2persian("09126761663")}}</a><br>
+{{--                            <a href="tel:02136348512">{{english2persian("09126452317")}}</a>--}}
                             <hr>
                         </td>
 
