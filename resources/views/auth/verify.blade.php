@@ -1,13 +1,16 @@
 @extends('layout.master')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 
-                <div class="card-body">
+    <header class="masthead bg-primary text-black-50 text-center">
+
+            <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('تایید ایمیل کاربری') }}</div>
+
+                    <div class="card-body">
                     @if (session('resent'))
                         <div class="alert alert-success" role="alert">
                             {{ __('A fresh verification link has been sent to your email address.') }}
@@ -25,9 +28,6 @@
         </div>
     </div>
 </div>
+    </header>
 @endsection
-@section('copyright')
-    <section class="copyright py-4 text-center text-white">
-        <div class="container"><small class="pre-wrap">Copyright © MDBI 2020</small></div>
-    </section>
-@endsection
+

@@ -6,6 +6,7 @@ use App\Brand;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\BrandRequestCreate;
 use App\Http\Requests\BrandRequestEdit;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Http\Request;
 
 class BrandController extends Controller
@@ -59,7 +60,7 @@ class BrandController extends Controller
         ]);
         // save in data base
 
-        return redirect(route('create_brand'));
+        return redirect(route('show_brand'));
 
 
     }
@@ -156,8 +157,19 @@ class BrandController extends Controller
      */
     public function destroy(Brand $brand)
     {
-        $brand->delete();
-        return back();
+
+//       if( $this->authorize('delete-brand')){
+//           $brand->delete();
+//           return back();
+//        }
+        if (Gate::allows('delete-brand')){
+            $brand->delete();
+            return back();
+        }
+            else {
+            abort(403,'شما اجازه دسترسی به این عملیات را ندارید!');
+        }
+
 
 
     }

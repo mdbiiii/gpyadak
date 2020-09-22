@@ -25,6 +25,12 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('dashboard-access',function ($user){
+            return $user->is_admin || $user->is_supperuser;
+        });
+
+        Gate::define('delete-brand',function ($user){
+            return $user->is_supperuser;
+        });
     }
 }
