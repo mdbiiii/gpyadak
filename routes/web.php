@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,31 +26,33 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::namespace('Admin')->group(function (){
 
-   Route::prefix('admin')->middleware('auth')->group(function (){
+   Route::prefix('admin')->middleware(['auth','verified'])->group(function (){
        Route::get('/','AdminController@index')->name('admin');
-       //Commodity routs
-       Route::get('/commodity','CommodityController@create')->name('commodity');
-       Route::post('/commodity','CommodityController@store');
-       Route::get('/commodity/{commodity}/edit','CommodityController@edit')->name('edit_commodity');
-       Route::put('/commodity/{commodity}/edit','CommodityController@update');
-       Route::get('/commodity/show','CommodityController@show')->name('show_commodity');
-       Route::delete('/commodity/{commodity}/delete','CommodityController@destroy');
-       //Car type routs
-       Route::get('/cartype','CartypeController@create')->name('create_cartype');
-       Route::post('/cartype','CartypeController@store');
-       Route::get('/cartype/{cartype}/edit','CartypeController@edit')->name('edit_cartype');
-       Route::put('/cartype/{cartype}/edit','CartypeController@update');
-       Route::get('/cartype/show','CartypeController@show')->name('show_cartype');
-       Route::delete('/cartype/{cartype}/delete','CartypeController@destroy');
+       Route::middleware('can:dashboard-access')->group(function (){
+           //Commodity routs
+           Route::get('/commodity','CommodityController@create')->name('commodity');
+           Route::post('/commodity','CommodityController@store');
+           Route::get('/commodity/{commodity}/edit','CommodityController@edit')->name('edit_commodity');
+           Route::put('/commodity/{commodity}/edit','CommodityController@update');
+           Route::get('/commodity/show','CommodityController@show')->name('show_commodity');
+           Route::delete('/commodity/{commodity}/delete','CommodityController@destroy');
+           //Car type routs
+           Route::get('/cartype','CartypeController@create')->name('create_cartype');
+           Route::post('/cartype','CartypeController@store');
+           Route::get('/cartype/{cartype}/edit','CartypeController@edit')->name('edit_cartype');
+           Route::put('/cartype/{cartype}/edit','CartypeController@update');
+           Route::get('/cartype/show','CartypeController@show')->name('show_cartype');
+           Route::delete('/cartype/{cartype}/delete','CartypeController@destroy');
 
 
-//brand routs
-       Route::get('/brand','BrandController@create')->name('create_brand');
-       Route::post('/brand','BrandController@store');
-       Route::get('/brand/{brand}/edit','BrandController@edit')->name('edit_brand');
-       Route::put('/brand/{brand}/edit','BrandController@update');
-       Route::get('/brand/show','BrandController@show')->name('show_brand');
-       Route::delete('/brand/{brand}/delete','BrandController@destroy');
+           //brand routs
+           Route::get('/brand','BrandController@create')->name('create_brand');
+           Route::post('/brand','BrandController@store');
+           Route::get('/brand/{brand}/edit','BrandController@edit')->name('edit_brand');
+           Route::put('/brand/{brand}/edit','BrandController@update');
+           Route::get('/brand/show','BrandController@show')->name('show_brand');
+           Route::delete('/brand/{brand}/delete','BrandController@destroy');
+       });
    });
 
 

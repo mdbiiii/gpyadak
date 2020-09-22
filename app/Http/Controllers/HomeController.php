@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Brand;
+
 use App\Commodity;
 use Illuminate\Http\Request;
 
@@ -25,29 +26,47 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+
+
         //hyundai
         $hyu=Brand::find(1);
-        $hyucommos=$hyu->commodities;
-        if (count($hyucommos)>5){
-            $hyu_commos=$hyucommos->random(6);
-        }elseif(count($hyucommos)<3){
-            $hyu_commos=[];
+
+
+        if (!is_null($hyu)){
+            $hyucommos=$hyu->commodities;
+            if (count($hyucommos)>5){
+                $hyu_commos=$hyucommos->random(6);
+            }elseif(count($hyucommos)<3){
+                $hyu_commos=[];
+            }else{
+                $hyu_commos=$hyucommos->random(3);
+            }
         }else{
-            $hyu_commos=$hyucommos->random(3);
+            $hyu_commos=[];
         }
+
         //hyundai
 
         //kia
 
         $kia=Brand::find(2);
-        $kiacommos=$kia->commodities;
-        if (count($kiacommos)>5){
-            $kia_commos=$kiacommos->random(6);
-        }elseif(count($kiacommos)<3){
+
+
+
+        if (!is_null($kia)){
+            $kiacommos=$kia->commodities;
+            if (count($kiacommos)>5){
+                $kia_commos=$kiacommos->random(6);
+            }elseif(count($kiacommos)<3){
+                $kia_commos=[];
+            }else{
+                $kia_commos=$kiacommos->random(3);
+            }
+        } else{
             $kia_commos=[];
-        }else{
-            $kia_commos=$kiacommos->random(3);
         }
+
         //kia
 
         //commodities
