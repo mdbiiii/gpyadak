@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Auth::routes();
+Auth::routes(['verify'=>true]);
 
 //Route::get('auth/google','Auth\GoogleAuthController@redirect')->name('google-auth');
 //Route::get('auth/google/callback','Auth\GoogleAuthController@callback');
