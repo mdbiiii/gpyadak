@@ -22,6 +22,12 @@ Auth::routes(['verify'=>true]);
 //Route::get('auth/google/callback','Auth\GoogleAuthController@callback');
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/faq', 'SupportController@faq')->name('faq');
+Route::get('/payment', 'SupportController@payment')->name('payment');
+Route::get('/shipment', 'SupportController@shipment')->name('shipment');
+Route::get('/feedback', 'SupportController@feedback')->name('feedback');
+Route::get('/order_tracking', 'SupportController@order_tracking')->name('order_tracking');
+
 
 
 Route::namespace('Admin')->group(function (){

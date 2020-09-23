@@ -26,7 +26,7 @@
         <ul class="navbar-nav ml-auto">
             @yield('login')
             <li class="nav-item mx-0 mx-lg-1">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <a class="navbar-brand js-scroll-trigger" href="{{asset('/')}}">
                     <img src="{{asset("/assets/img/PSD.png")}}" style="width: 125px;margin:auto;" >GunnerPart
 
                 </a>
@@ -36,28 +36,7 @@
         </ul>
 
         <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-secondary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
 
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#kia"><img src="{{asset("/assets/img/Hyundai.png")}}" style="width: 28px;margin: -10px -3px 0 0;">هیوندا </a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#kia"><img
-                            src="{{asset("/assets/img/Kia.png")}}" style="width: 28px;margin: -10px -3px 0 0;">کیا </a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">قطعات یدکی</a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">درباره ما</a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">تماس با ما</a>
-                </li>
-
-            </ul>
-        </div>
     </div>
 </nav>
 @yield('content')
@@ -155,8 +134,8 @@
                     <br>
                     <li><a title="لطفا انتقادات و پیشنهادات خود را با ما در میان بزارید" href="{{route('feedback')}}">انتقادات و پیشنهادات</a></li>
                     <br>
-{{--                    <li><a title="پاسخ به پرسش های متداول" href="#">سوالات متداول</a></li>--}}
-{{--                    <br>--}}
+                    {{--                    <li><a title="پاسخ به پرسش های متداول" href="#">سوالات متداول</a></li>--}}
+                    {{--                    <br>--}}
                     <li><a title="سفارش خود را از اینجا پیگیری کنید" href="{{route('order_tracking')}}">پیگیری سفارش</a></li>
 
                 </ul>
