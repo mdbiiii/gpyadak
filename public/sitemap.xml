@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://gpyadak.ir/</loc>
+  <lastmod>2020-09-25T09:16:31+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://gpyadak.ir/commodity/10</loc>
+  <lastmod>2020-09-25T09:16:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://gpyadak.ir/commodity/11</loc>
+  <lastmod>2020-09-25T09:16:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://gpyadak.ir/commodity/12</loc>
+  <lastmod>2020-09-25T09:16:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://gpyadak.ir/payment</loc>
+  <lastmod>2020-09-25T09:16:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://gpyadak.ir/shipment</loc>
+  <lastmod>2020-09-25T09:16:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://gpyadak.ir/feedback</loc>
+  <lastmod>2020-09-25T09:16:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://gpyadak.ir/order_tracking</loc>
+  <lastmod>2020-09-25T09:16:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
