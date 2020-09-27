@@ -2,6 +2,13 @@
 
 
     @extends('support.master')
+    @section('meta')
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="سوالات متداول">
+        <meta name="author" content="">
+        <title>گانر پارت:سوالات متداول</title>
+        @endsection
     @section('content')
 
 
@@ -164,3 +171,4 @@
     @endsection
 
 </div>
+s

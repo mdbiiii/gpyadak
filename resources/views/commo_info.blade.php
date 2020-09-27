@@ -1,5 +1,8 @@
 @extends('layout.master')
+@section('title')
+    <title>گانر پارت-قطعه یدکی</title>
 
+@endsection
 
     @section('content')
 

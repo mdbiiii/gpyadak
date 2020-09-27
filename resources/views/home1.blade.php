@@ -2,6 +2,11 @@
 
 
     @extends('layout.master')
+
+    @section('title')
+        <title>گانر پارت-صفحه اصلی</title>
+
+        @endsection
     @section('content')
 
 

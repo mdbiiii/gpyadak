@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Gunner</title>
+    @yield('meta')
+
+    <link rel="icon" href="{{asset('assets/img/Gunner-LOGO.png')}}" type="image/gif" sizes="16x16">
+
+
     <!-- Font Awesome icons (free version)-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -27,7 +27,7 @@
             @yield('login')
             <li class="nav-item mx-0 mx-lg-1">
                 <a class="navbar-brand js-scroll-trigger" href="{{asset('/')}}">
-                    <img src="{{asset("/assets/img/PSD.png")}}" style="width: 125px;margin:auto;" >GunnerPart
+                    <img src="{{asset("/assets/img/Gunner-LOGO.png")}}" style="width: 125px;margin:auto;" >GunnerPart
 
                 </a>
             </li>
@@ -36,7 +36,15 @@
         </ul>
 
         <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-secondary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{route('home')}}">خانه</a>
+                </li>
 
+
+            </ul>
+        </div>
     </div>
 </nav>
 @yield('content')
