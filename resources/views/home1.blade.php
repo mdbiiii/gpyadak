@@ -84,7 +84,8 @@
                 <section class="page-section" id="kia">
                     <div class="container">
                         <div class="text-right">
-                            <h4 class=" text-secondary mb-0 d-inline-block"><img src="{{asset("/assets/img/Kia.png")}}">قطعات یدکی کیا</h4>
+                            <a href="{{route('kia')}}"><h4 class=" text-secondary mb-0 d-inline-block"><img src="{{asset("/assets/img/Kia.png")}}">قطعات یدکی کیا</h4>
+                            </a>
 
                         </div>
                         <hr style="color: #1a252f">
@@ -125,8 +126,8 @@
                 <section class="page-section" id="hiyonda">
                     <div class="container">
                         <div class="text-right">
-                            <h4 class=" text-secondary mb-0 d-inline-block"><img src="{{asset("/assets/img/Hyundai.png")}}">قطعات یدکی هیوندا</h4>
-
+                            <a href="{{route('hyundai')}}"><h4 class=" text-secondary mb-0 d-inline-block"><img src="{{asset("/assets/img/Hyundai.png")}}">قطعات یدکی هیوندا</h4>
+                            </a>
                         </div>
                         <hr style="color: #1a252f">
                         <div class="row">

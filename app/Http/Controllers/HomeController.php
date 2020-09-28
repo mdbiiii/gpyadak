@@ -87,4 +87,34 @@ class HomeController extends Controller
         ]);
     }
 
+    public function kia(){
+        $kia=Brand::find(2);
+
+
+
+        if (!is_null($kia)){
+            $kia_commos=$kia->commodities;
+
+        } else{
+            $kia_commos=[];
+        }
+
+        return view('kia',compact('kia_commos'));
+
+
+    }
+    public function hyundai(){
+        $hyu=Brand::find(1);
+
+
+        if (!is_null($hyu)){
+            $hyu_commos=$hyu->commodities;
+
+        }else{
+            $hyu_commos=[];
+        }
+        return view('hyundai',compact('hyu_commos'));
+
+    }
+
 }

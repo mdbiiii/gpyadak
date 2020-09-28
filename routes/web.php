@@ -22,6 +22,9 @@ Auth::routes(['verify'=>true]);
 //Route::get('auth/google/callback','Auth\GoogleAuthController@callback');
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/kia', 'HomeController@kia')->name('kia');
+Route::get('/hyundai', 'HomeController@hyundai')->name('hyundai');
+
 Route::get('/faq', 'SupportController@faq')->name('faq');
 Route::get('/payment', 'SupportController@payment')->name('payment');
 Route::get('/shipment', 'SupportController@shipment')->name('shipment');

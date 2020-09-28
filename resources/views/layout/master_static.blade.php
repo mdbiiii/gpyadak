@@ -47,18 +47,14 @@
                 </li>
 
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#kia"><img src="{{asset("/assets/img/Hyundai.png")}}" style="width: 28px;margin: -10px -3px 0 0;">هیوندا </a>
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{route('hyundai')}}"><img src="{{asset("/assets/img/Hyundai.png")}}" style="width: 28px;margin: -10px -3px 0 0;">هیوندا </a>
                 </li>
                 <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#kia"><img
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{route('kia')}}"><img
                             src="{{asset("/assets/img/Kia.png")}}" style="width: 28px;margin: -10px -3px 0 0;">کیا </a>
                 </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">قطعات یدکی</a>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1">
-                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">درباره ما</a>
-                </li>
+
+
                 <li class="nav-item mx-0 mx-lg-1">
                     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">تماس با ما</a>
                 </li>

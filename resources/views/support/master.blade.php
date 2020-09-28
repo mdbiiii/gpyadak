@@ -60,17 +60,17 @@
                 <hr>
 
 
-                <p class="pre-wrap lead mb-1">تهران، خیابان ملت،ایستگاه مترو ملت</p>
+                <p class="pre-wrap lead mb-1">تهران، چراغ برق،خیابان نظامیه،بن بست ویژه</p>
 
 
-                <a class="btn btn-success footer-map mb-1" href="https://www.google.com/maps/dir//%D8%A7%DB%8C%D8%B3%D8%AA%DA%AF%D8%A7%D9%87+%D9%85%D8%AA%D8%B1%D9%88+%D9%85%D9%84%D8%AA%E2%80%AD%E2%80%AD%E2%80%AD/@35.7265992,51.3523646,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3f8e018bebbdd9a7:0xf5ad2cc0abd40e8f!2m2!1d51.4268282!2d35.6885533" title="آدرس گانر‍‍پارت در نقشه گوگل" target="_blank">
+                <a class="btn btn-success footer-map mb-1" href="https://www.google.com/maps/dir//%DA%AF%D8%A7%D9%86%D8%B1+%D9%BE%D8%A7%D8%B1%D8%AA%E2%80%AD%E2%80%AD/@35.7266795,51.3319966,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3f8e01a54f359601:0x3fbce593e7533f2f!2m2!1d51.4301955!2d35.6885692" title="آدرس گانر‍‍پارت در نقشه گوگل" target="_blank">
                     <img alt="Google Map" title="آدرس گانرپارت در نقشه گوگل"  src="{{asset("/assets/img/Google-Maps.png")}}">
                     مسیریابی گوگل
 
                     <i class="fas fa-arrow-circle-left"></i>
                 </a>
 
-                <a class="btn btn-info footer-map" href="https://www.waze.com/livemap/directions?to=ll.35.7655429%2C51.3462744&from=place.ChIJJ6Sz3ioBjj8RG8yOfbZcmOA" title="آدرس گانر‍‍پارت در نقشه waze" target="_blank">
+                <a class="btn btn-info footer-map" href="https://www.waze.com/livemap/directions?to=ll.35.68814979%2C51.43029571&from=" title="آدرس گانر‍‍پارت در نقشه waze" target="_blank">
                     <img alt="Google Map" title="آدرس گانرپارت در نقشه waze"  src="{{asset("/assets/img/waze.png")}}">
                     مسیریابی ویز
 
