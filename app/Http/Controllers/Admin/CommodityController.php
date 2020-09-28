@@ -124,7 +124,10 @@ class CommodityController extends Controller
                 'name'=>'required',
                 'info'=>'required',
             ]);
+            $cartype_ID=$request->input('cartype');
+
             $commodity->update([
+                'cartype_id'=>$cartype_ID,
                 'name'=>$valid_data['name'],
                 'info'=>$valid_data['info'],
 
@@ -142,7 +145,12 @@ class CommodityController extends Controller
 
             $file->move(public_path($file_path),$file_name);
 
+            $cartype_ID=$request->input('cartype');
+
+
+
             $commodity->update([
+                'cartype_id'=>$cartype_ID,
                 'name'=>$valid_data['name'],
                 'info'=>$valid_data['info'],
                 'image_url'=>$file_url,

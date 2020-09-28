@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('admin.master_admin')
 @section('login')
     <ul class="navbar-nav ml-auto">
 
@@ -48,6 +48,22 @@
                                             @enderror
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نوع ماشین') }}</label>
+                                        <div class="col-md-6">
+
+
+                                            <select name="cartype" class=" form-controls"  >
+                                                @foreach(\App\Cartype::all() as $cartype)
+                                                    <option ></option>
+                                                    <option value="{{$cartype->id}}" {{($commodity->cartype_id === $cartype->id) ? 'Selected' : ''}}>{{$cartype->name}}</option>
+                                                @endforeach
+
+                                            </select>
+                                        </div>
+
+                                    </div>
+
 
                                     <div class="form-group row">
                                         <label for="info" class="col-md-4 col-form-label text-md-right">{{ __('اطلاعات محصول') }}</label>

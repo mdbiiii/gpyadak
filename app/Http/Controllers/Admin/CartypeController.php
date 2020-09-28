@@ -119,7 +119,9 @@ class CartypeController extends Controller
                 'name'=>'required',
                 'info'=>'required',
             ]);
+            $brand_ID=$request->input('brand');
             $cartype->update([
+                'brand_id'=>$brand_ID,
                 'name'=>$valid_data['name'],
                 'info'=>$valid_data['info'],
 
@@ -136,8 +138,10 @@ class CartypeController extends Controller
             $file_url=url("{$file_path}/{$file_name}");
 
             $file->move(public_path($file_path),$file_name);
+            $brand_ID=$request->input('brand');
 
             $cartype->update([
+                'brand_id'=>$brand_ID,
                 'name'=>$valid_data['name'],
                 'info'=>$valid_data['info'],
                 'image_url'=>$file_url,

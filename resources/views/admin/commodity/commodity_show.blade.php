@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('admin.master_admin')
 @section('login')
     <ul class="navbar-nav ml-auto">
 

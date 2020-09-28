@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('admin.master_admin')
 @section('login')
     <ul class="navbar-nav ml-auto">
 
@@ -47,6 +47,20 @@
                                     </span>
                                             @enderror
                                         </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نوع برند ماشین') }}</label>
+                                        <div class="col-md-6">
+
+                                            <select name="brand" class=" form-controls"  >
+                                                <option value=""></option>
+                                                @foreach(\App\Brand::all() as $brand)
+                                                    <option value="{{$brand->id}}" {{($cartype->brand_id === $brand->id) ? 'Selected' : ''}}>{{$brand->name}}</option>
+                                                @endforeach
+
+                                            </select>
+                                        </div>
+
                                     </div>
 
                                     <div class="form-group row">

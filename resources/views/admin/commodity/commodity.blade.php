@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('admin.master_admin')
 @section('login')
     <ul class="navbar-nav ml-auto">
 
@@ -52,6 +52,7 @@
                                         <div class="col-md-6">
 
                                         <select name="cartype" class=" form-controls"  >
+                                            <option ></option>
                                             @foreach(\App\Cartype::all() as $cartype)
                                                 <option value="{{$cartype->id}}">{{$cartype->name}}</option>
                                             @endforeach

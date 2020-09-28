@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('admin.master_admin')
 @section('login')
     <ul class="navbar-nav ml-auto">
 
@@ -53,6 +53,7 @@
                                         <div class="col-md-6">
 
                                             <select name="brand" class=" form-controls"  >
+                                                <option ></option>
                                                 @foreach(\App\Brand::all() as $brand)
                                                     <option value="{{$brand->id}}">{{$brand->name}}</option>
                                                 @endforeach
