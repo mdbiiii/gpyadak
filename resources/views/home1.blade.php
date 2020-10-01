@@ -11,69 +11,148 @@
 
 
 
-        <header class="masthead bg-primary text-white text-center">
-            <div class="row">
-                <div class="col-lg-6 mr-auto">
-                    <div class="container d-flex align-items-center flex-column">
-                        <!-- Masthead Heading-->
-                        <h1 class="masthead-heading mb-0">گانر ‍‍ پارت</h1>
-                        <!-- Icon Divider-->
-                        <div class="divider-custom divider-light">
-                            <div class="divider-custom-line"></div>
-                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                            <div class="divider-custom-line"></div>
-                        </div>
-                        <!-- Masthead Subheading-->
+        <header class="masthead bg-primary text-white text-center cth">
+            <section id="hero" class="d-flex justify-content-center align-items-center">
+                <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
 
-                        <span class="pre-wrap masthead-subheading  font-weight-bold badge badge-pill badge-primary   mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا<img  src="{{asset("/assets/img/export2.png")}}" alt="کالای تقلبی" style="width: 60px"></span>
-                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0 " > ضمانت اصالت قطعات یدکی هیوندا و کیا <img  src="{{asset("/assets/img/asl.png")}}" alt="کالای تقلبی" style="width: 60px"></span>
-                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > تحویل اکسپرس سریع کالا در سراسر کشور <img  src="{{asset("/assets/img/delivery.png")}}" alt="کالای تقلبی" style="width: 60px"></span>
-                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > مشاوره رایگان از استعلام تا تحویل کالا <img  src="{{asset("/assets/img/moshavere.png")}}" alt="کالای تقلبی" style="width: 50px"></span>
-
-                    </div>
-
-                </div>
-                <br>
-                <div class="col-lg-6 ">
-                    <div class="container d-flex align-items-center flex-column">
-                        <!-- Masthead Heading-->
-                        <div class="row" >
-
-                            <div class="" style="background: #17a2b8 !important">
-                                <div class=" card-img ">
-                                    <img class="img-responsive" src="{{asset("/assets/img/carpart.png")}}" alt="قطعات یدکی">
-                                </div>
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="carousel-container">
+                            <h2 class="animate__animated animate__fadeInDown text-white">گانر ‍‍ پارت </h2>
+                            <div class="divider-custom divider-light">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
                             </div>
+                            <p class="animate__animated animate__fadeInUp"><span class="pre-wrap masthead-subheading   badge badge-pill badge-dark  mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا</span>
+                            </p>
+                            <p class="animate__animated animate__fadeInUp"><span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-dark  mb-0 " > ضمانت اصالت قطعات یدکی هیوندا و کیا </span>
+                            </p>
 
+
+
+
+                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
                         </div>
-                        <br>
-                        <div class="row">
-                            <p class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-dark mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهید<img  src="{{asset("/assets/img/fake.png")}}" alt="کالای تقلبی" style="width: 60px"></p>
-                            <br>
-
-                        </div>
-                        <div class="row mt-2">
-
-
-
-
-
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"><p class="pre-wrap masthead-subheading badge badge-pill badge-light mb-0" style="font-size: small" ><img  src="{{asset("/assets/img/call.png")}}" alt="تماس" style="width: 40px">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید</p></a>
-
-
-
-
-                        </div>
-
-
-
                     </div>
-                </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="carousel-container">
+                            <h2 class="animate__animated animate__fadeInDown text-white">تضمین اصالت کالا </h2>
+                            <div class="divider-custom divider-light">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <p class="animate__animated animate__fadeInUp"><span class="pre-wrap masthead-subheading   badge badge-pill badge-dark  mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهید</span>
+                            </p>
+                            <a href="#contact">
 
-            </div>
+                                <p class="animate__animated animate__fadeInUp"><span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-dark  mb-0 " > برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید </span>
+                                </p>
+                            </a>
+
+                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="carousel-container">
+                            <h2 class="animate__animated animate__fadeInDown text-white">تحویل کالا در کمترین زمان </h2>
+                            <div class="divider-custom divider-light">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <p class="animate__animated animate__fadeInUp"><span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-dark  mb-0 " > تحویل اکسپرس سریع کالا در سراسر کشور </span>
+                            </p>
+                            <p class="animate__animated animate__fadeInUp"><span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-dark  mb-0 " > مشاوره رایگان از استعلام تا تحویل کالا </span>
+                            </p>
+
+                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                        </div>
+                    </div>
+
+
+
+
+                    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+
+                    <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"><</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                </div>
+            </section>
+
+              <!-- End Hero -->
+
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-6 mr-auto">--}}
+{{--                    <div class="container d-flex align-items-center flex-column">--}}
+{{--                        <!-- Masthead Heading-->--}}
+{{--                        <h1 class="masthead-heading mb-0">گانر ‍‍ پارت</h1>--}}
+{{--                        <!-- Icon Divider-->--}}
+{{--                        <div class="divider-custom divider-light">--}}
+{{--                            <div class="divider-custom-line"></div>--}}
+{{--                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>--}}
+{{--                            <div class="divider-custom-line"></div>--}}
+{{--                        </div>--}}
+{{--                        <!-- Masthead Subheading-->--}}
+
+{{--                        <span class="pre-wrap masthead-subheading  font-weight-bold badge badge-pill badge-primary   mb-0" >واردات مستقیم قطعات یدکی هیوندا و کیا<img  src="{{asset("/assets/img/export2.png")}}" alt="کالای تقلبی" style="width: 60px"></span>--}}
+{{--                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>--}}
+{{--                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0 " > ضمانت اصالت قطعات یدکی هیوندا و کیا <img  src="{{asset("/assets/img/asl.png")}}" alt="کالای تقلبی" style="width: 60px"></span>--}}
+{{--                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>--}}
+{{--                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > تحویل اکسپرس سریع کالا در سراسر کشور <img  src="{{asset("/assets/img/delivery.png")}}" alt="کالای تقلبی" style="width: 60px"></span>--}}
+{{--                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>--}}
+{{--                        <span class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-primary  mb-0" > مشاوره رایگان از استعلام تا تحویل کالا <img  src="{{asset("/assets/img/moshavere.png")}}" alt="کالای تقلبی" style="width: 50px"></span>--}}
+
+{{--                    </div>--}}
+
+{{--                </div>--}}
+{{--                <br>--}}
+{{--                <div class="col-lg-6 ">--}}
+{{--                    <div class="container d-flex align-items-center flex-column">--}}
+{{--                        <!-- Masthead Heading-->--}}
+{{--                        <div class="row" >--}}
+
+{{--                            <div>--}}
+{{--                                <div class=" card-img ">--}}
+{{--                                    <img class="img-responsive" src="{{asset("/assets/img/carpart.png")}}" alt="قطعات یدکی">--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+
+{{--                        </div>--}}
+{{--                        <br>--}}
+{{--                        <div class="row">--}}
+{{--                            <p class="pre-wrap masthead-subheading font-weight-bold badge badge-pill badge-dark mb-0" >تقلبی نخرید! کالای اصلی را از ما بخواهید<img  src="{{asset("/assets/img/fake.png")}}" alt="کالای تقلبی" style="width: 60px"></p>--}}
+{{--                            <br>--}}
+
+{{--                        </div>--}}
+{{--                        <div class="row mt-2">--}}
+
+
+
+
+
+{{--                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"><p class="pre-wrap masthead-subheading badge badge-pill badge-light mb-0" style="font-size: small" ><img  src="{{asset("/assets/img/call.png")}}" alt="تماس" style="width: 40px">برای کسب اطلاعات و استعلام قیمت کافی است تماس بگیرید</p></a>--}}
+
+
+
+
+{{--                        </div>--}}
+
+
+
+{{--                    </div>--}}
+{{--                </div>--}}
+
+{{--            </div>--}}
 
         </header>
 
@@ -251,7 +330,7 @@
         <!-- Portfolio Modal-->
 
         <!-- about-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
+        <section class="page-section bg-primary text-white mb-0 ctu" id="about">
             <div class="container">
                 <!-- About Section Heading-->
                 <div class="text-center">
@@ -277,7 +356,7 @@
         <!-- about-->
 
         <!-- contact-->
-        <section class="page-section " id="contact">
+        <section class="page-section cta " id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
                 <div class="text-center">
@@ -326,7 +405,7 @@
                             <a class="lead font-weight-bold" href="tel:09126761663"><hr>{{english2persian("09126761663")}}</a>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-2">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fas fa-phone"></i></div>
                             <div class="text-muted">دفتر فروش</div>
