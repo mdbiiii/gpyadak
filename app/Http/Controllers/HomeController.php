@@ -6,6 +6,7 @@ use App\Brand;
 use App\Commodity;
 use Illuminate\Http\Request;
 
+
 class HomeController extends Controller
 {
 
@@ -26,7 +27,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        alert()->success('برای تسریع در استعلام قیمت یا خرید قطعه کافیست نام قطعه مدنظر + مدل خودرو + سال تولید + (در صورت امکان شماره شاسی ماشین) را به شماره 6761663-98912+ واتساپ کنید','راهنمایی')->persistent('بستن');
 
 
         //hyundai
@@ -85,6 +86,8 @@ class HomeController extends Controller
             'hyu_commos'=>$hyu_commos,
             'kia_commos'=>$kia_commos
         ]);
+
+
     }
 
     public function kia(){

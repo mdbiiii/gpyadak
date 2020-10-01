@@ -7,6 +7,7 @@
     <meta name="keywords" content="لوازم یدکی, هیوندا, کیا , قطعات یدکی">
     <meta name="author" content="">
     <link rel="icon" href="{{asset('assets/img/Gunner-LOGO.png')}}" type="image/gif" sizes="16x16">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 @yield('title')
 
@@ -191,5 +192,9 @@
 <script src="{{asset("/assets/mail/contact_me.js")}}"></script>
 <!-- Core theme JS-->
 <script src="{{asset("/js/scripts.js")}}"></script>
+
+
 </body>
+<script src="{{ asset('js/app.js') }}"></script>
+@include('sweet::alert')
 </html>
