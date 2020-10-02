@@ -100,7 +100,7 @@
                         <th scope="row">موبایل</th>
                         <td>
                             <a href="tel:09126761663">{{english2persian("09126761663")}}</a><br>
-{{--                            <a href="tel:02136348512">{{english2persian("09126452317")}}</a>--}}
+                            {{--                            <a href="tel:02136348512">{{english2persian("09126452317")}}</a>--}}
                             <hr>
                         </td>
 
@@ -136,15 +136,15 @@
 
 
                 <ul style="text-align: right ; color: #fffacc">
-                    <li><a title="شرایط پرداخت برای سفارش ها" href="{{route('payment')}}">شرایط پرداخت</a></li>
+                    <li><a title="شرایط پرداخت برای سفارش ها" href="{{route('payment')}}" style="color: #e2e3e5">شرایط پرداخت</a></li>
                     <br>
-                    <li><a title="شرایط ارسال کالا به سراسر ایران" href="{{route('shipment')}}">شرایط ارسال</a></li>
+                    <li><a title="شرایط ارسال کالا به سراسر ایران" href="{{route('shipment')}}" style="color: #e2e3e5">شرایط ارسال</a></li>
                     <br>
-                    <li><a title="لطفا انتقادات و پیشنهادات خود را با ما در میان بزارید" href="{{route('feedback')}}">انتقادات و پیشنهادات</a></li>
+                    <li><a title="لطفا انتقادات و پیشنهادات خود را با ما در میان بزارید" href="{{route('feedback')}}" style="color: #e2e3e5">انتقادات و پیشنهادات</a></li>
                     <br>
                     {{--                    <li><a title="پاسخ به پرسش های متداول" href="#">سوالات متداول</a></li>--}}
                     {{--                    <br>--}}
-                    <li><a title="سفارش خود را از اینجا پیگیری کنید" href="{{route('order_tracking')}}">پیگیری سفارش</a></li>
+                    <li><a title="سفارش خود را از اینجا پیگیری کنید" href="{{route('order_tracking')}}" style="color: #e2e3e5">پیگیری سفارش</a></li>
 
                 </ul>
 
