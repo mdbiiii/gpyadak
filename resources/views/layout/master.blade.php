@@ -26,6 +26,7 @@
 
 
 <body id="page-top">
+
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav" dir="rtl">
     <div class="container">
         <ul class="navbar-nav ml-auto">
@@ -197,4 +198,5 @@
 </body>
 <script src="{{ asset('js/app.js') }}"></script>
 @include('sweet::alert')
+
 </html>

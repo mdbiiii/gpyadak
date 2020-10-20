@@ -11,6 +11,7 @@ use SebastianBergmann\CodeCoverage\TestFixture\C;
 
 class CommodityController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
