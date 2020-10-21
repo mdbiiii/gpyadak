@@ -61,14 +61,16 @@ class CommodityController extends Controller
 
 
 
-        Commodity::create([
+        $commodity=Commodity::create([
             'cartype_id'=>$cartype_ID,
             'name'=>$valid_data['name'],
             'info'=>$valid_data['info'],
             'image_url'=>$file_url
         ]);
 
-        return redirect(route('commodity'));
+        $commodity->tags()->attach($request->input('tags'));
+
+        return redirect(route('show_commodity'));
 
 
     }
@@ -156,6 +158,8 @@ class CommodityController extends Controller
                 'info'=>$valid_data['info'],
                 'image_url'=>$file_url,
             ]);
+
+            $commodity->tags()->sync($request->input('tags'));
         }
 
 
@@ -178,8 +182,10 @@ class CommodityController extends Controller
 
     public function show_commo(Commodity $commodity)
     {
+        $tags=$commodity->tags()->get();
         return view('commo_info',[
             'commodity'=> $commodity,
+            'tags'=>$tags
         ]);
     }
 }

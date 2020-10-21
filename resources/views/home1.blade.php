@@ -197,6 +197,21 @@
 
                         </div>
 
+                        <div class="card-footer text-center">
+
+
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">کیا</a>
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">لوازم یدکی کیا</a>
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">اسپورتیج</a>
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">سراتو</a>
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">سراتو</a>
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">موهاوی</a>
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">کادنزا</a>
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">سورنتو</a>
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">اپتیما</a>
+                            <a style="color:#d02223; border: 1px solid; font-size: small" href="{{route('kia')}}">قطعات یدکی</a>
+                        </div>
+
                     </div>
                 </section>
 
@@ -236,7 +251,20 @@
                             @endforeach
                         </div>
 
+                        <div class="card-footer text-center">
 
+
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">هیوندا</a>
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">لوازم یدکی هیوندا</a>
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">سانتافه</a>
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">توسان</a>
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">آزرا</a>
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">آزرا گرنجور</a>
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">i20</a>
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">i30</a>
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">النترا</a>
+                            <a style="color: #0277bd; border: 1px solid; font-size: small" href="{{route('hyundai')}}">آوانته</a>
+                        </div>
 
                     </div>
                 </section>

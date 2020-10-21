@@ -17,8 +17,9 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{$commodity->name}}</h5>
                                         <p class="card-text m-4 text-justify "dir="rtl"> {{$commodity->info}}</p>
-                                        <p class="card-text"><small class="text-muted">Last updated {{$commodity->updated_at}}</small></p>
+{{--                                        <p class="card-text"><small class="text-muted">Last updated {{$commodity->updated_at}}</small></p>--}}
                                     </div>
+
 
                                     <div class="container">
                                         <!-- Contact Section Heading-->
@@ -39,14 +40,16 @@
                                                         <i class="fab fa-telegram" aria-hidden="true"></i>
                                                     </div>
                                                     <div class="text-muted">تلگرام</div>
-                                                    <div class="lead font-weight-bold"><hr>@gunnerparts_support<br>
-                                                        {{english2persian("09126452317")}}</div>
+                                                    <div class="lead font-weight-bold"><hr><a class="contact-telegram" title="لینک تلگرام" href="https://telegram.me/Gunnerparts_support">
+
+                                                            Gunnerparts_support</a><br>
+                                                        <a href="tel:09126761663">{{english2persian("09126761663")}}</a></div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2">
                                                 <div class="d-flex flex-column align-items-center">
                                                     <div class="icon-contact mb-2"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-                                                    <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="https://wa.me/98912676163"><hr>{{english2persian("09126452317")}}</a>
+                                                    <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="https://wa.me/989126761663"><hr>{{english2persian("09126452317")}}</a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2">
@@ -63,19 +66,26 @@
                                                 <div class="d-flex flex-column align-items-center">
                                                     <div class="icon-contact mb-2"><i class="fa fa-mobile-alt"></i></div>
                                                     <div class="text-muted">شماره همراه</div>
-                                                    <a class="lead font-weight-bold" href="tel:09126761663"><hr>{{english2persian("09126452317")}}</a>
+                                                    <a class="lead font-weight-bold" href="tel:09126761663"><hr>{{english2persian("09126761663")}}</a>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3">
+                                            <div class="col-lg-2">
                                                 <div class="d-flex flex-column align-items-center">
                                                     <div class="icon-contact mb-2"><i class="fas fa-phone"></i></div>
-                                                    <div class="text-muted">دفتر فروش</div><a class="lead font-weight-normal" href="tel:09126761663">
-                                                        <hr>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}<br>{{english2persian("885698456-021")}}</a>
+                                                    <div class="text-muted">دفتر فروش</div>
+                                                    <a class="lead font-weight-bold" href="tel:02133966541"><hr>{{english2persian("33966541-021")}}</a><br>
+                                                    <a class="lead font-weight-bold" href="tel:02136059430">{{english2persian("36059430-021")}}</a><br>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
+                                </div>
+                                <div class="card-footer text-right">
+                                    <h6> :کلمات کلیدی</h6>
+                                    @foreach($tags as $tag)
+                                        <a style="color: #0f6674; border: 1px solid; font-size: small" href="#">{{$tag->name}}</a>
+                                    @endforeach
                                 </div>
 
 

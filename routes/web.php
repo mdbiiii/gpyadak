@@ -45,6 +45,13 @@ Route::namespace('Admin')->group(function (){
            Route::put('/commodity/{commodity}/edit','CommodityController@update');
            Route::get('/commodity/show','CommodityController@show')->name('show_commodity');
            Route::delete('/commodity/{commodity}/delete','CommodityController@destroy');
+           //Tag routs
+           Route::get('/tag','TagController@create')->name('tag');
+           Route::post('/tag','TagController@store');
+           Route::get('/tag/{tag}/edit','TagController@edit')->name('edit_tag');
+           Route::put('/tag/{tag}/edit','TagController@update');
+           Route::get('/tag/show','TagController@show')->name('show_tag');
+           Route::delete('/tag/{tag}/delete','TagController@destroy');
            //Car type routs
            Route::get('/cartype','CartypeController@create')->name('create_cartype');
            Route::post('/cartype','CartypeController@store');
