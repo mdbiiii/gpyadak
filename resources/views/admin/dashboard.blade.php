@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+
     <!-- Favicon -->
 
 
@@ -19,6 +20,8 @@
     <!-- Template -->
     <link rel="stylesheet" href="{{asset("dashboard/graindashboard/css/graindashboard.css")}}">
     <link rel="stylesheet" href="{{asset("/css/font.css")}}">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 
 </head>
@@ -162,6 +165,33 @@
             </li>
             <!-- End Brands -->
 
+            <!-- Tags -->
+            <li class="side-nav-menu-item side-nav-has-menu">
+                <a class="side-nav-menu-link media align-items-center" href="#"
+                   data-target="#subTags">
+                  <span class="side-nav-menu-icon d-flex mr-3">
+                    <i class="fa fa-car"></i>
+                  </span>
+                    <span class="side-nav-fadeout-on-closed media-body"> کلمات کلیدی</span>
+                    <span class="side-nav-control-icon d-flex">
+                <i class="gd-angle-right side-nav-fadeout-on-closed"></i>
+              </span>
+                    <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
+                </a>
+
+                <!-- Brands: subTags -->
+                <ul id="subTags" class="side-nav-menu side-nav-menu-second-level mb-0">
+                    <li class="side-nav-menu-item">
+                        <a class="side-nav-menu-link" href="{{route('show_tag')}}">نمایش کلمات ثبت شده</a>
+                    </li>
+                    <li class="side-nav-menu-item">
+                        <a class="side-nav-menu-link" href="{{route('tag')}}">ایجاد کلمه جدید</a>
+                    </li>
+                </ul>
+                <!-- End Brands: subTags -->
+            </li>
+            <!-- End Tags -->
+
             <!-- Cars -->
             <li class="side-nav-menu-item side-nav-has-menu">
                 <a class="side-nav-menu-link media align-items-center" href="#"
@@ -286,7 +316,7 @@
             <div class="container">
 
                 <div class="row justify-content-center text-center">
-                    <div class="col-md-4">
+                    <div class="col-md-4 pt-2">
                         <div class="card">
                             <div class="card-header">{{ __('ایجاد قطعه یدکی') }}</div>
 
@@ -297,7 +327,18 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 pt-2">
+                        <div class="card">
+                            <div class="card-header">{{ __('ایجاد کلمه کلیدی') }}</div>
+
+                            <div class="card-body">
+
+                                <a href="{{route('tag')}}" class="btn btn-dark">برای وارد کردن کلمه جدید کلیک کنید</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 pt-2">
                         <div class="card">
                             <div class="card-header">{{ __('ایجاد برند') }}</div>
 
@@ -308,7 +349,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 pt-2">
                         <div class="card">
                             <div class="card-header">{{ __('ایجاد ماشین') }}</div>
 
@@ -371,14 +412,12 @@
 <script src="{{asset("dashboard/demo/gd.chartist-area.js")}}"></script>
 <script src="{{asset("dashboard/demo/gd.chartist-bar.js")}}"></script>
 <script src="{{asset("dashboard/demo/gd.chartist-donut.js")}}"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 <script>
     $.GDCore.components.GDChartistArea.init('.js-area-chart');
     $.GDCore.components.GDChartistBar.init('.js-bar-chart');
     $.GDCore.components.GDChartistDonut.init('.js-donut-chart');
 </script>
 </body>
-{{--<script src="{{ asset('js/app.js') }}"></script>--}}
+<!--<script src="{{ asset('js/app.js') }}"></script>-->
 @include('sweet::alert')
 </html>
