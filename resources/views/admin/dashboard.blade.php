@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-
     <!-- Favicon -->
 
 
@@ -20,8 +19,6 @@
     <!-- Template -->
     <link rel="stylesheet" href="{{asset("dashboard/graindashboard/css/graindashboard.css")}}">
     <link rel="stylesheet" href="{{asset("/css/font.css")}}">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 
 
 </head>
@@ -84,14 +81,14 @@
                         <li class="unfold-item unfold-item-has-divider">
 
 
-                                <form action="{{route('logout')}}" method="post">
-                                    @csrf
-                                    <button class="btn btn-danger embed-responsive" >
+                            <form action="{{route('logout')}}" method="post">
+                                @csrf
+                                <button class="btn btn-danger embed-responsive" >
                                         <span class="unfold-item-icon mr-3">
                                              <i class="gd-power-off"></i>
                                          </span>
-                                        خروج </button>
-                                </form>
+                                    خروج </button>
+                            </form>
 
 
                         </li>
@@ -124,15 +121,15 @@
             <!-- End Dashboard -->
 
             <!-- Documentation -->
-{{--            <li class="side-nav-menu-item">--}}
-{{--                <a class="side-nav-menu-link media align-items-center" href="documentation/" target="_blank">--}}
-{{--              <span class="side-nav-menu-icon d-flex mr-3">--}}
-{{--                <i class="gd-file"></i>--}}
-{{--              </span>--}}
-{{--                    <span class="side-nav-fadeout-on-closed media-body">Documentation</span>--}}
-{{--                </a>--}}
-{{--            </li>--}}
-            <!-- End Documentation -->
+        {{--            <li class="side-nav-menu-item">--}}
+        {{--                <a class="side-nav-menu-link media align-items-center" href="documentation/" target="_blank">--}}
+        {{--              <span class="side-nav-menu-icon d-flex mr-3">--}}
+        {{--                <i class="gd-file"></i>--}}
+        {{--              </span>--}}
+        {{--                    <span class="side-nav-fadeout-on-closed media-body">Documentation</span>--}}
+        {{--                </a>--}}
+        {{--            </li>--}}
+        <!-- End Documentation -->
 
             <!-- Title -->
             <li class="sidebar-heading h6">عملیات</li>
@@ -164,33 +161,6 @@
                 <!-- End Brands: subBrands -->
             </li>
             <!-- End Brands -->
-
-            <!-- Tags -->
-            <li class="side-nav-menu-item side-nav-has-menu">
-                <a class="side-nav-menu-link media align-items-center" href="#"
-                   data-target="#subTags">
-                  <span class="side-nav-menu-icon d-flex mr-3">
-                    <i class="fa fa-car"></i>
-                  </span>
-                    <span class="side-nav-fadeout-on-closed media-body"> کلمات کلیدی</span>
-                    <span class="side-nav-control-icon d-flex">
-                <i class="gd-angle-right side-nav-fadeout-on-closed"></i>
-              </span>
-                    <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
-                </a>
-
-                <!-- Brands: subTags -->
-                <ul id="subTags" class="side-nav-menu side-nav-menu-second-level mb-0">
-                    <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="{{route('show_tag')}}">نمایش کلمات ثبت شده</a>
-                    </li>
-                    <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="{{route('tag')}}">ایجاد کلمه جدید</a>
-                    </li>
-                </ul>
-                <!-- End Brands: subTags -->
-            </li>
-            <!-- End Tags -->
 
             <!-- Cars -->
             <li class="side-nav-menu-item side-nav-has-menu">
@@ -247,51 +217,51 @@
             <!-- End Parts -->
 
             <!-- Authentication -->
-{{--            <li class="side-nav-menu-item side-nav-has-menu">--}}
-{{--                <a class="side-nav-menu-link media align-items-center" href="#"--}}
-{{--                   data-target="#subPages">--}}
-{{--              <span class="side-nav-menu-icon d-flex mr-3">--}}
-{{--                <i class="gd-lock"></i>--}}
-{{--              </span>--}}
-{{--                    <span class="side-nav-fadeout-on-closed media-body">Authentication</span>--}}
-{{--                    <span class="side-nav-control-icon d-flex">--}}
-{{--                <i class="gd-angle-right side-nav-fadeout-on-closed"></i>--}}
-{{--              </span>--}}
-{{--                    <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>--}}
-{{--                </a>--}}
+        {{--            <li class="side-nav-menu-item side-nav-has-menu">--}}
+        {{--                <a class="side-nav-menu-link media align-items-center" href="#"--}}
+        {{--                   data-target="#subPages">--}}
+        {{--              <span class="side-nav-menu-icon d-flex mr-3">--}}
+        {{--                <i class="gd-lock"></i>--}}
+        {{--              </span>--}}
+        {{--                    <span class="side-nav-fadeout-on-closed media-body">Authentication</span>--}}
+        {{--                    <span class="side-nav-control-icon d-flex">--}}
+        {{--                <i class="gd-angle-right side-nav-fadeout-on-closed"></i>--}}
+        {{--              </span>--}}
+        {{--                    <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>--}}
+        {{--                </a>--}}
 
-{{--                <!-- Pages: subPages -->--}}
-{{--                <ul id="subPages" class="side-nav-menu side-nav-menu-second-level mb-0">--}}
-{{--                    <li class="side-nav-menu-item">--}}
-{{--                        <a class="side-nav-menu-link" href="login.html">Login</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="side-nav-menu-item">--}}
-{{--                        <a class="side-nav-menu-link" href="register.html">Register</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="side-nav-menu-item">--}}
-{{--                        <a class="side-nav-menu-link" href="password-reset.html">Forgot Password</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="side-nav-menu-item">--}}
-{{--                        <a class="side-nav-menu-link" href="password-reset-2.html">Forgot Password 2</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="side-nav-menu-item">--}}
-{{--                        <a class="side-nav-menu-link" href="email-verification.html">Email Verification</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--                <!-- End Pages: subPages -->--}}
-{{--            </li>--}}
-            <!-- End Authentication -->
+        {{--                <!-- Pages: subPages -->--}}
+        {{--                <ul id="subPages" class="side-nav-menu side-nav-menu-second-level mb-0">--}}
+        {{--                    <li class="side-nav-menu-item">--}}
+        {{--                        <a class="side-nav-menu-link" href="login.html">Login</a>--}}
+        {{--                    </li>--}}
+        {{--                    <li class="side-nav-menu-item">--}}
+        {{--                        <a class="side-nav-menu-link" href="register.html">Register</a>--}}
+        {{--                    </li>--}}
+        {{--                    <li class="side-nav-menu-item">--}}
+        {{--                        <a class="side-nav-menu-link" href="password-reset.html">Forgot Password</a>--}}
+        {{--                    </li>--}}
+        {{--                    <li class="side-nav-menu-item">--}}
+        {{--                        <a class="side-nav-menu-link" href="password-reset-2.html">Forgot Password 2</a>--}}
+        {{--                    </li>--}}
+        {{--                    <li class="side-nav-menu-item">--}}
+        {{--                        <a class="side-nav-menu-link" href="email-verification.html">Email Verification</a>--}}
+        {{--                    </li>--}}
+        {{--                </ul>--}}
+        {{--                <!-- End Pages: subPages -->--}}
+        {{--            </li>--}}
+        <!-- End Authentication -->
 
             <!-- Settings -->
-{{--            <li class="side-nav-menu-item">--}}
-{{--                <a class="side-nav-menu-link media align-items-center" href="settings.html">--}}
-{{--              <span class="side-nav-menu-icon d-flex mr-3">--}}
-{{--                <i class="gd-settings"></i>--}}
-{{--              </span>--}}
-{{--                    <span class="side-nav-fadeout-on-closed media-body">Settings</span>--}}
-{{--                </a>--}}
-{{--            </li>--}}
-            <!-- End Settings -->
+        {{--            <li class="side-nav-menu-item">--}}
+        {{--                <a class="side-nav-menu-link media align-items-center" href="settings.html">--}}
+        {{--              <span class="side-nav-menu-icon d-flex mr-3">--}}
+        {{--                <i class="gd-settings"></i>--}}
+        {{--              </span>--}}
+        {{--                    <span class="side-nav-fadeout-on-closed media-body">Settings</span>--}}
+        {{--                </a>--}}
+        {{--            </li>--}}
+        <!-- End Settings -->
 
 
 
@@ -316,7 +286,7 @@
             <div class="container">
 
                 <div class="row justify-content-center text-center">
-                    <div class="col-md-4 pt-2">
+                    <div class="col-md-4">
                         <div class="card">
                             <div class="card-header">{{ __('ایجاد قطعه یدکی') }}</div>
 
@@ -327,18 +297,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 pt-2">
-                        <div class="card">
-                            <div class="card-header">{{ __('ایجاد کلمه کلیدی') }}</div>
-
-                            <div class="card-body">
-
-                                <a href="{{route('tag')}}" class="btn btn-dark">برای وارد کردن کلمه جدید کلیک کنید</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 pt-2">
+                    <div class="col-md-4">
                         <div class="card">
                             <div class="card-header">{{ __('ایجاد برند') }}</div>
 
@@ -349,7 +308,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 pt-2">
+                    <div class="col-md-4">
                         <div class="card">
                             <div class="card-header">{{ __('ایجاد ماشین') }}</div>
 
@@ -365,35 +324,35 @@
 
 
     {{--        <div class="row">--}}
-{{--            @foreach($commodities as $commodity)--}}
-{{--                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1">--}}
-{{--                    <div class="card">--}}
-{{--                        <div class="thumbnail text-center">--}}
-{{--                          <div class="card-img-top">--}}
-{{--                              <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;" alt="">--}}
+    {{--            @foreach($commodities as $commodity)--}}
+    {{--                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-1">--}}
+    {{--                    <div class="card">--}}
+    {{--                        <div class="thumbnail text-center">--}}
+    {{--                          <div class="card-img-top">--}}
+    {{--                              <img class="img-responsive img-fluid imglazyload card-img-top" src="{{$commodity->image_url}}" style="display: block; opacity: 0.99;" alt="">--}}
 
-{{--                          </div>--}}
-{{--                            <div class="card-body">--}}
-{{--                                <p>--}}
-{{--                                    {{$commodity->info}}--}}
-{{--                                </p>--}}
-{{--                            </div>--}}
+    {{--                          </div>--}}
+    {{--                            <div class="card-body">--}}
+    {{--                                <p>--}}
+    {{--                                    {{$commodity->info}}--}}
+    {{--                                </p>--}}
+    {{--                            </div>--}}
 
 
-{{--                            <hr>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+    {{--                            <hr>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
 
-{{--                </div>--}}
-{{--            @endforeach--}}
+    {{--                </div>--}}
+    {{--            @endforeach--}}
 
-{{--        </div>--}}
+    {{--        </div>--}}
 
-        <!-- Footer -->
+    <!-- Footer -->
         <footer class="small p-3 px-md-4 mt-auto">
             <div class="row justify-content-between">
                 <div class="col-lg text-center text-lg-right">
-                   copyright &copy; 2020 MDBI
+                    copyright &copy; 2020 MDBI
                 </div>
             </div>
         </footer>
@@ -412,12 +371,14 @@
 <script src="{{asset("dashboard/demo/gd.chartist-area.js")}}"></script>
 <script src="{{asset("dashboard/demo/gd.chartist-bar.js")}}"></script>
 <script src="{{asset("dashboard/demo/gd.chartist-donut.js")}}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <script>
     $.GDCore.components.GDChartistArea.init('.js-area-chart');
     $.GDCore.components.GDChartistBar.init('.js-bar-chart');
     $.GDCore.components.GDChartistDonut.init('.js-donut-chart');
 </script>
 </body>
-<script src="{{ asset('js/app.js') }}"></script>
+{{--<script src="{{ asset('js/app.js') }}"></script>--}}
 @include('sweet::alert')
 </html>
