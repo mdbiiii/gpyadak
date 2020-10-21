@@ -18,126 +18,78 @@
             </li>
         @endif
     </ul>
-@endsection
+    @endsection
 @section('content')
+
 
     <header class="masthead bg-primary text-black-50 text-center">
         <div class="container d-flex align-items-center flex-column">
             <div class="container" >
 
                 <div class="row justify-content-center" style="font-family: 'Vazir', sans-serif;">
-                    <div class="col-md-8">
+                    <div class="col-md-auto">
                         <div class="card">
-                            <div class="card-header">{{ __('بروزرسانی محصولات') }}</div>
+                            <div class="card-header">{{ __('نمایش کلمات کلیدی') }}</div>
+                            <div class="card-header">
+
+                                <div class="card-tools d-flex">
+                                    <form action="">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <input type="text" name="search" class="form-control float-right" placeholder="جستجو" value="{{ request('search') }}">
+
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="btn-group-sm mr-1">
+                                        <a href="{{route('tag')}}" class="btn btn-info">ایجاد کلمه جدید</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <div class="card-body">
-                                <form method="POST" action="{{asset("/admin/commodity/{$commodity->id}/edit")}}" enctype="multipart/form-data">
-                                    @csrf
-                                    @method('put')
-
-                                    <div class="form-group row">
-                                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نام محصول') }}</label>
-
-                                        <div class="col-md-6">
-                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror " name="name" value="{{$commodity->name}}"  >
-
-                                            @error('name')
-                                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('نوع ماشین') }}</label>
-                                        <div class="col-md-6">
 
 
-                                            <select name="cartype" class=" form-controls"  >
-                                                @foreach(\App\Cartype::all() as $cartype)
-                                                    <option ></option>
-                                                    <option value="{{$cartype->id}}" {{($commodity->cartype_id === $cartype->id) ? 'Selected' : ''}}>{{$cartype->name}}</option>
-                                                @endforeach
+                                <table class="table table-bordered table-hover table-responsive-sm">
+                                    <thead>
 
-                                            </select>
-                                        </div>
+                                    <tr>
+                                        <th scope="col">id</th>
+                                        <th scope="col">کلمه کلیدی</th>
+                                        <th scope="col">عملیات</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($tags as $tag)
+                                    <tr>
 
-                                    </div>
-
-
-                                    <div class="form-group row">
-                                        <label for="info" class="col-md-4 col-form-label text-md-right">{{ __('اطلاعات محصول') }}</label>
-
-                                        <div class="col-md-6">
-
-                                            <textarea name="info" id="info" cols="30" rows="10"  class="form-control @error('info') is-invalid @enderror" name="info" value="">{{$commodity->info}}</textarea>
-
-                                            @error('info')
-                                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <label for="file" class="col-md-4 col-form-label text-md-right">{{ __('تصویر محصول') }}</label>
-
-                                        <div class="col-md-6">
-                                            <img  class=" img-fluid img-thumbnail " src="{{\Illuminate\Support\Facades\URL::asset($commodity->image_url)}}">
-
-                                            <p>
-                                                <input id="file" type="file" class="form-control @error('image') is-invalid @enderror" name="image"
-                                                       value="#" onchange="loadFile(event)">
-                                                <img class=" img-fluid img-thumbnail " id="output"   alt=""/>
-                                            </p>
-                                            <script>
-                                                var loadFile = function(event) {
-                                                    var image = document.getElementById('output');
-                                                    image.src = URL.createObjectURL(event.target.files[0]);
-                                                };
-                                            </script>
+                                            <th scope="row">{{$tag->id}}</th>
+                                            <td>{{$tag->name}}</td>
+                                        <td>
+                                            <a href="{{asset("/admin/tag/{$tag->id}/edit")}}" class="btn btn-info">ویرایش</a>
+                                            <form action="{{asset("/admin/tag/{$tag->id}/delete")}}" method="POST">
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="btn btn-danger">حذف</button>
+                                            </form>
+                                        </td>
 
 
 
 
-                                            @error('image')
-                                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                            @enderror
-                                        </div>
-                                    </div>
 
-                                    <div class="form-group row">
-                                        <label for="tag" class="col-md-4 col-form-label text-md-right">{{ __('کلمات کلیدی:انتخاب بیش از یک مورد با نگه داشتن کلیدCtrl') }}</label>
+                                    </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
 
-                                        <div class="col-md-6">
-                                            <select name="tags[]" multiple class="form-control" id="tag">
-                                                @foreach(\App\Tag::all() as $tag)
-                                                    <option value="{{$tag->id}}" {{ in_array($tag->id , $commodity->tags()->pluck('id')->toArray()) ? 'selected' : '' }}>{{$tag->name}}</option>
-                                                @endforeach
 
-                                            </select>
-
-                                            @error('tag')
-                                            <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row mb-0">
-                                        <div class="col-md-6 offset-md-4">
-                                            <button type="submit" class="btn btn-primary">
-                                                {{ __('بروزرسانی') }}
-                                            </button>
-
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
+
+                            <div class="card-footer">{{$tags->render()}}</div>
                         </div>
                     </div>
                 </div>
@@ -145,9 +97,7 @@
         </div>
     </header>
 
-    {{----}}
 
-    {{--    --}}
 
 @endsection
 
