@@ -8,6 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{{asset('assets/img/Gunner-LOGO.png')}}" type="image/gif" sizes="16x16">
 
+
 @yield('title')
 
     <!-- Font Awesome icons (free version)-->
@@ -79,4 +80,5 @@
 <!-- Core theme JS-->
 <script src="{{asset("/js/scripts.js")}}"></script>
 </body>
+
 </html>
