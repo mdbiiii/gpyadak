@@ -106,8 +106,10 @@ class CommodityController extends Controller
      */
     public function edit(Commodity $commodity)
     {
+        $tags=$commodity->tags()->get();
         return view('admin.commodity.commodity_edit',[
             'commodity'=> $commodity,
+            'tags'=>$tags
         ]);
     }
 
