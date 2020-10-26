@@ -249,7 +249,7 @@
                     <div class="col-lg-2">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-2"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-                            <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="https://wa.me/989126761663"><hr>{{english2persian("09126452317")}}</a>
+                            <div class="text-muted">واتساپ</div><a class="lead font-weight-bold" href="https://wa.me/989126761663"><hr>{{english2persian("09126761663")}}</a>
                         </div>
                     </div>
                     <div class="col-lg-2">
