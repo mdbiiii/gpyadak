@@ -31,7 +31,8 @@ class HomeController extends Controller
 
 
         //hyundai
-        $hyu=Brand::find(1);
+        $hyu=Brand::find(3);
+
 
 
         if (!is_null($hyu)){
@@ -51,12 +52,13 @@ class HomeController extends Controller
 
         //kia
 
-        $kia=Brand::find(2);
+        $kia=Brand::find(4);
 
 
 
         if (!is_null($kia)){
             $kiacommos=$kia->commodities;
+
             if (count($kiacommos)>5){
                 $kia_commos=$kiacommos->random(6);
             }elseif(count($kiacommos)<3){
@@ -91,7 +93,7 @@ class HomeController extends Controller
     }
 
     public function kia(){
-        $kia=Brand::find(2);
+        $kia=Brand::find(4);
 
 
 
@@ -101,13 +103,14 @@ class HomeController extends Controller
         } else{
             $kia_commos=[];
         }
+        return $kia_commos;
 
         return view('kia',compact('kia_commos'));
 
 
     }
     public function hyundai(){
-        $hyu=Brand::find(1);
+        $hyu=Brand::find(3);
 
 
         if (!is_null($hyu)){
@@ -116,6 +119,8 @@ class HomeController extends Controller
         }else{
             $hyu_commos=[];
         }
+
+        return $hyu_commos;
         return view('hyundai',compact('hyu_commos'));
 
     }
