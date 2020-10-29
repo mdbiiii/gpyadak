@@ -24,7 +24,7 @@
                                     <div class="container">
                                         <!-- Contact Section Heading-->
                                         <div class="text-right">
-                                            <h2 class="page-section-heading text-secondary d-inline-block mb-0 mr-3">با ما تماس بگیرید</h2>
+                                            <h4 class="page-section-heading text-secondary d-inline-block mb-0 mr-3">با ما تماس بگیرید</h4>
                                         </div>
                                         <!-- Icon Divider-->
                                         <hr>
@@ -82,7 +82,6 @@
 
                                 </div>
                                 <div class="card-footer text-right">
-                                    <h6> :کلمات کلیدی</h6>
                                     @foreach($tags as $tag)
                                         <a style="color: #0f6674; border: 1px solid; font-size: small" href="#">{{$tag->name}}</a>
                                     @endforeach

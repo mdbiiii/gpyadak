@@ -175,15 +175,15 @@
                                             <a href="{{asset("/commodity/{$hyu_commo->id}")}}" target="_blank">
                                                 <img class="img-responsive img-fluid imglazyload card-img-top" src="{{asset("$hyu_commo->image_url")}}" style="display: block; opacity: 0.99;" alt="">
                                             </a>
-                                            <div  style="width: 180px; height: 75px; display: block" >
+                                            <div  style="width:auto; height: 75px; display: block ;" >
                                                 <a href="{{asset("/commodity/{$hyu_commo->id}")}}" target="_blank">
 
                                                     {{--                                                <p class="text-sm-center text-md-center text-lg-center text-xl-center  " >{{$commodity->name}}</p>--}}
-                                                    <h5 class="mx-auto" >{{$hyu_commo->name}}</h5>
+                                                    <h5 class="mt-2" >{{$hyu_commo->name}}</h5>
 
                                                 </a>
                                             </div>
-                                            <a href="{{asset("/commodity/{$hyu_commo->id}")}}"><span class="text-success">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
+                                            <a href="{{asset("/commodity/{$hyu_commo->id}")}}"><span class="text-success bg-light">جهت اطلاع از قیمت تماس بگیرید</span></a><br><br>
                                             <a href="#contact" class="btn btn-success btn-sm rounded js-scroll-trigger active" style="background-color: #ae703b;border-color: #ae703b;" target="_blank">
                                                 <i class="fa fa-phone"></i>تماس</a>
                                             <a href="{{asset("/commodity/{$hyu_commo->id}")}}" onclick="compare_add(2330);" class="btn btn-info btn-sm">
