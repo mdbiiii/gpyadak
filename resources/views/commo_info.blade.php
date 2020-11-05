@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('title')
-    <title>گانر پارت-قطعه یدکی</title>
+    <title>گانر پارت-{{$commodity->name}}</title>
 
 @endsection
 
