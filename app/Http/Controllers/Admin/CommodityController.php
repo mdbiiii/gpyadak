@@ -6,6 +6,7 @@ use App\Commodity;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CommodityRequestCreate;
 use App\Http\Requests\CommodityRequestEdit;
+use App\Tag;
 use Illuminate\Http\Request;
 use SebastianBergmann\CodeCoverage\TestFixture\C;
 
@@ -48,7 +49,7 @@ class CommodityController extends Controller
         $file_name=$file->getClientOriginalName();
 
         $file_path="upload/commodity/{$file_name}";
-       $file_url=url("{$file_path}/{$file_name}");
+        $file_url=url("{$file_path}/{$file_name}");
 
 
 
@@ -176,18 +177,13 @@ class CommodityController extends Controller
      */
     public function destroy(Commodity $commodity)
     {
-       $commodity->delete();
-       return back();
+        $commodity->delete();
+        return back();
     }
 
 
 
-    public function show_commo(Commodity $commodity)
-    {
-        $tags=$commodity->tags()->get();
-        return view('commo_info',[
-            'commodity'=> $commodity,
-            'tags'=>$tags
-        ]);
-    }
+
+
+
 }

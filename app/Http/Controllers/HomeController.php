@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Brand;
 
 use App\Commodity;
+use App\Tag;
 use Illuminate\Http\Request;
 
 
@@ -123,6 +124,36 @@ class HomeController extends Controller
         return $hyu_commos;
         return view('hyundai',compact('hyu_commos'));
 
+    }
+
+    public function tag(Tag $tag){
+        $commodities=$tag->commodities()->get();
+
+
+
+        if (!is_null($commodities)){
+            $commos=$commodities;
+
+        } else{
+            $commos=[];
+        }
+//        return $commos;
+
+
+        return view('tag',[
+            'commos'=>$commos,
+            'tag'=>$tag,
+            ]);
+
+
+    }
+    public function show_commo(Commodity $commodity)
+    {
+        $tags=$commodity->tags()->get();
+        return view('commo_info',[
+            'commodity'=> $commodity,
+            'tags'=>$tags
+        ]);
     }
 
 }

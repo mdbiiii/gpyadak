@@ -24,6 +24,8 @@ Auth::routes(['verify'=>true]);
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/kia', 'HomeController@kia')->name('kia');
 Route::get('/hyundai', 'HomeController@hyundai')->name('hyundai');
+Route::get('/cat/{tag}','HomeController@tag')->name('cat');
+Route::get('/commodity/{commodity}','HomeController@show_commo')->name('show_1_commodity');
 
 Route::get('/faq', 'SupportController@faq')->name('faq');
 Route::get('/payment', 'SupportController@payment')->name('payment');
@@ -73,7 +75,8 @@ Route::namespace('Admin')->group(function (){
 
 
 
-    Route::get('/commodity/{commodity}','CommodityController@show_commo')->name('show_1_commodity');
+
+
 
 
 

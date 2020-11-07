@@ -83,7 +83,10 @@
                                 </div>
                                 <div class="card-footer text-right">
                                     @foreach($tags as $tag)
-                                        <a style="color: #0f6674; border: 1px solid; font-size: small" href="#">{{$tag->name}}</a>
+
+
+{{--                                        <a style="color: #0f6674; border: 1px solid; font-size: small" href="{{route('tag',$tag->id)}}">{{$tag->name}}</a>--}}
+                                        <a style="color: #0f6674; border: 1px solid; font-size: small" href="{{route('cat',$tag->id)}}">{{$tag->name}}</a>
                                     @endforeach
                                 </div>
 
